@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=1800&q=85&auto=format&fit=crop&crop=center" fetchpriority="high">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="OpenRoad Auto Group — Premium pre-owned vehicles in Opa Locka, FL. Honest pricing, financing available, bilingual service. Call (786) 927-9128.">
 <meta name="keywords" content="used cars Opa Locka FL, pre-owned vehicles Miami, car dealership Opa Locka, auto financing Florida, carros usados Miami">
@@ -249,15 +248,6 @@ section{padding:6rem 0}
 @keyframes modalIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--gray-4);font-size:20px;cursor:pointer;z-index:1;transition:color .2s;line-height:1}
 .modal-close:hover{color:var(--white)}
-.modal-box{background:var(--gray-1);border:.5px solid rgba(184,150,90,.3);max-width:640px;width:100%;max-height:90vh;overflow-y:auto;position:relative;animation:modalIn .3s var(--ease)}
-.modal-img-wrap{position:relative;overflow:hidden}
-.modal-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-.modal-title{font-family:var(--font-serif);font-size:1.8rem;font-weight:300;margin-bottom:.75rem;margin-top:.25rem}
-.vehicle-make{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem}
-.modal-body{padding:1.5rem 2rem 2rem}
-.spec-item{display:flex;flex-direction:column;gap:3px}
-.spec-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-4)}
-.spec-value{font-size:13px;color:var(--white)}
 .modal-header{padding:2rem 2rem 1rem;border-bottom:.5px solid rgba(184,150,90,.15)}
 .modal-vehicle-title{font-family:var(--font-serif);font-size:1.8rem;font-weight:300;margin-bottom:4px}
 .modal-price{color:var(--gold);font-family:var(--font-serif);font-size:1.4rem}
@@ -1194,7 +1184,8 @@ function toggleLang(){lang=lang==='en'?'es':'en';document.body.classList.toggle(
 
 // MODALS
 function openModal(id){document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden'}
-function closeModal(id){var el=typeof id==='string'?document.getElementById('modal-'+id):id;if(el){el.classList.remove('open');document.body.style.overflow=''}}
+
+function closeModal(id){var el=(typeof id==='string')?document.getElementById('modal-'+id):id;if(el){el.classList.remove('open');document.body.style.overflow=''}}
 function closeModalOutside(e){if(e.target===e.currentTarget){e.currentTarget.classList.remove('open');document.body.style.overflow=''}}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(m=>{m.classList.remove('open');document.body.style.overflow=''});document.getElementById('ai-popup').classList.remove('open')}});
 
@@ -1219,9 +1210,9 @@ function submitForm(e,id){e.preventDefault();const el=document.getElementById(id
 function toggleAI(){document.getElementById('ai-popup').classList.toggle('open')}
 
 // SCROLL ANIMATIONS
-const obs=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+const obs=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')}),{threshold:0,rootMargin:'0px 0px 0px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-setTimeout(()=>document.querySelectorAll('#hero .fade-up').forEach(el=>el.classList.add('visible')),100);
+document.querySelectorAll('#hero .fade-up').forEach(el=>el.classList.add('visible'));
 
 // ENHANCED SEARCH FILTERS
 function applyFilters(){
