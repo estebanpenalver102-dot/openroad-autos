@@ -1,3 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenRoad Auto Group — Premium pre-owned vehicles in Opa Locka, FL">
+    <title>OpenRoad Auto Group</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // Vehicle Database
+        const vehicles = {
+            'bentley-continental-gtc': {
+                id: 'bentley-continental-gtc',
+                year: 2007,
+                make: 'Bentley',
+                model: 'Continental GTC',
+                price: 42500,
+                monthlyPayment: 822,
+                mileage: '11,278 mi',
+                title: 'Clean',
+                engine: 'W12 Twin-Turbo',
+                body: 'Convertible',
+                color: 'Silver',
+                drive: 'AWD',
+                description: 'An exceptionally low-mileage Bentley Continental GTC — hand-crafted interior with twin-turbocharged W12 performance. One of the most iconic drop-tops in automotive history.',
+                images: [
+                    'https://cardealercentral.blob.core.windows.net/cardealercentral/5d0225a1-323b-4ad3-9b78-b9330486c2f2.jpg',
+                    'https://images.unsplash.com/photo-1592345921519-21aa6d5bbc5d?w=800',
+                    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800'
+                ],
+                features: ['Leather Interior', 'Power Convertible Top', 'Premium Sound System', 'Navigation', 'Climate Control'],
+                history: 'Single owner, full service history, no accidents'
+            },
+            'chevrolet-silverado-lt': {
+                id: 'chevrolet-silverado-lt',
+                year: 2017,
+                make: 'Chevrolet',
+                model: 'Silverado LT',
+                price: 28500,
+                monthlyPayment: 551,
+                mileage: '87,863 mi',
+                title: 'Clean',
+                engine: 'V8 5.3L',
+                body: 'Pickup',
+                color: 'White',
+                drive: '4WD',
+                description: 'A dependable work-ready Silverado LT with a proven V8 engine. Well-maintained, clean title, and ready for whatever job you throw at it.',
+                images: [
+                    'https://images.unsplash.com/photo-1533473359331-35af3ffcbf1f?w=800',
+                    'https://images.unsplash.com/photo-1581563432455-8ceebb63fbb0?w=800',
+                    'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800'
+                ],
+                features: ['4WD', 'Towing Package', 'Crew Cab', 'Backup Camera', 'Cruise Control'],
+                history: 'Fleet maintained, regular service, excellent condition'
+            },
+            'ram-1500-rebel': {
+                id: 'ram-1500-rebel',
+                year: 2019,
+                make: 'Ram',
+                model: '1500 Rebel',
+                price: 27500,
+                monthlyPayment: 532,
+                mileage: '131,854 mi',
+                title: 'Clean',
+                engine: 'V8 5.7L HEMI',
+                body: 'Pickup 4D',
+                color: 'Black',
+                drive: '4WD',
+                description: 'A bold 2019 Ram 1500 Rebel with Sport and Rebel packages. HEMI V8 power meets off-road capability in this aggressive yet refined pickup.',
+                images: [
+                    'https://images.unsplash.com/photo-1609708536965-bc4e4b9a5f75?w=800',
+                    'https://images.unsplash.com/photo-1605559424843-9e4c3ca4628d?w=800',
+                    'https://images.unsplash.com/photo-1533473359331-35af3ffcbf1f?w=800'
+                ],
+                features: ['Off-Road Package', 'Remote Start', 'Power Windows/Locks', 'Towing Mirrors', 'Bedliner'],
+                history: 'Well-maintained, no damage history'
+            },
+            'honda-civic-exl': {
+                id: 'honda-civic-exl',
+                year: 2017,
+                make: 'Honda',
+                model: 'Civic EX-L',
+                price: 14500,
+                monthlyPayment: 280,
+                mileage: '151,380 mi',
+                title: 'Clean',
+                engine: '1.5L Turbo',
+                body: 'Sedan',
+                color: 'Gray',
+                drive: 'FWD',
+                description: 'A reliable Honda Civic EX-L with leather interior, sunroof, and Honda\'s proven 1.5L turbo engine. Excellent fuel economy meets premium comfort.',
+                images: [
+                    'https://images.unsplash.com/photo-1590362891990-f8ddb41d3fe1?w=800',
+                    'https://images.unsplash.com/photo-1581092160562-40038f06c139?w=800',
+                    'https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800'
+                ],
+                features: ['Sunroof', 'Leather Seats', 'Bluetooth', 'Apple CarPlay', 'Backup Camera'],
+                history: 'Single owner, full Honda service records'
+            },
+            'hyundai-sonata-sel': {
+                id: 'hyundai-sonata-sel',
+                year: 2021,
+                make: 'Hyundai',
+                model: 'Sonata SEL',
+                price: 13050,
+                monthlyPayment: 252,
+                mileage: '112,900 mi',
+                title: 'Clean',
+                engine: '2.5L 4-Cyl',
+                body: 'Sedan',
+                color: 'Blue',
+                drive: 'FWD',
+                description: 'A sleek 2021 Hyundai Sonata SEL with modern safety tech, Apple CarPlay, and outstanding fuel efficiency. Stylish design inside and out.',
+                images: [
+                    'https://images.unsplash.com/photo-1590362891990-f8ddb41d3fe1?w=800',
+                    'https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800',
+                    'https://images.unsplash.com/photo-1609708536965-bc4e4b9a5f75?w=800'
+                ],
+                features: ['Smart Cruise Control', 'Lane Keep Assist', 'Wireless Charging', 'Sunroof', 'Navigation'],
+                history: 'Certified Pre-Owned, warranty available'
+            }
+        };
+
+        // Routing function
+        function showPage() {
+            const path = window.location.pathname;
+            const app = document.getElementById('app');
+            
+            // Check if it's a vehicle detail page
+            const vehicleMatch = path.match(/\/vehicle\/([^\/]+)/);
+            if (vehicleMatch) {
+                const vehicleId = vehicleMatch[1];
+                if (vehicles[vehicleId]) {
+                    renderVehicleDetail(vehicles[vehicleId], app);
+                } else {
+                    app.innerHTML = '<div class="container"><h1>Vehicle not found</h1><a href="/">Back to Home</a></div>';
+                }
+            } else {
+                renderHome(app);
+            }
+        }
+
+        function renderHome(app) {
+            app.innerHTML = `
+                <div class="container" style="text-align: center; padding: 60px 20px;">
+                    <h1 style="margin-bottom: 20px; color: #b8965a; font-size: 3em;">🚀 Lovable Website Deployed!</h1>
+                    <p style="font-size: 18px; color: #666; margin-bottom: 30px;">Your new OpenRoad Auto Group website is live.</p>
+                    <p style="font-size: 16px; color: #999; margin-bottom: 40px;">Vehicle detail pages are being added with individual links for each car...</p>
+                    
+                    <div style="background: #f5f5f5; padding: 30px; border-radius: 8px; max-width: 600px; margin: 0 auto;">
+                        <h2 style="color: #333; margin-bottom: 20px;">Available Vehicles</h2>
+                        <div style="display: grid; gap: 15px;">
+                            ${Object.values(vehicles).map(v => `
+                                <a href="/vehicle/${v.id}" style="
+                                    display: block;
+                                    padding: 15px;
+                                    background: white;
+                                    border: 1px solid #ddd;
+                                    border-radius: 5px;
+                                    text-decoration: none;
+                                    color: #333;
+                                    transition: all 0.3s;
+                                ">
+                                    <strong>${v.year} ${v.make} ${v.model}</strong><br>
+                                    $${v.price.toLocaleString()} | ${v.mileage}
+                                </a>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 40px; padding: 20px; background: #e8f4f8; border-radius: 8px;">
+                        <h3 style="color: #0066cc;">✅ Next Steps:</h3>
+                        <p style="color: #333;">1. Review vehicle detail pages</p>
+                        <p style="color: #333;">2. Connect to your Lovable editor for final customizations</p>
+                        <p style="color: #333;">3. Website is live at: <strong>openroad-autos.com</strong></p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderVehicleDetail(vehicle, app) {
+            app.innerHTML = `
+                <div class="container">
+                    <a href="/" style="
+                        display: inline-block;
+                        margin-bottom: 20px;
+                        color: #b8965a;
+                        text-decoration: none;
+                        font-weight: bold;
+                    ">← Back to Home</a>
+                    
+                    <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <!-- Main Image -->
+                        <div style="width: 100%; height: 400px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <img id="mainImage" src="${vehicle.images[0]}" alt="${vehicle.year} ${vehicle.make} ${vehicle.model}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Image Thumbnails -->
+                        <div style="display: flex; gap: 10px; padding: 15px; background: #f9f9f9; overflow-x: auto;">
+                            ${vehicle.images.map((img, idx) => `
+                                <img src="${img}" alt="Image ${idx + 1}" 
+                                    onclick="document.getElementById('mainImage').src='${img}'"
+                                    style="
+                                        width: 80px;
+                                        height: 80px;
+                                        object-fit: cover;
+                                        border-radius: 5px;
+                                        cursor: pointer;
+                                        opacity: ${idx === 0 ? '1' : '0.6'};
+                                        transition: opacity 0.3s;
+                                    ">
+                            `).join('')}
+                        </div>
+                        
+                        <!-- Vehicle Info -->
+                        <div style="padding: 30px;">
+                            <h1 style="color: #333; margin-bottom: 10px; font-size: 2.5em;">${vehicle.year} ${vehicle.make} ${vehicle.model}</h1>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                                <div>
+                                    <p style="color: #999; font-size: 12px; text-transform: uppercase; margin-bottom: 5px;">Price</p>
+                                    <p style="color: #b8965a; font-size: 2em; font-weight: bold;">$${vehicle.price.toLocaleString()}</p>
+                                    <p style="color: #666; font-size: 14px;">Est. $${vehicle.monthlyPayment}/mo</p>
+                                </div>
+                                <div>
+                                    <p style="color: #999; font-size: 12px; text-transform: uppercase; margin-bottom: 5px;">Mileage</p>
+                                    <p style="font-size: 1.5em; font-weight: bold;">${vehicle.mileage}</p>
+                                </div>
+                                <div>
+                                    <p style="color: #999; font-size: 12px; text-transform: uppercase; margin-bottom: 5px;">Engine</p>
+                                    <p style="font-size: 1.5em; font-weight: bold;">${vehicle.engine}</p>
+                                </div>
+                                <div>
+                                    <p style="color: #999; font-size: 12px; text-transform: uppercase; margin-bottom: 5px;">Title</p>
+                                    <p style="font-size: 1.5em; font-weight: bold; color: #27ae60;">${vehicle.title}</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Specifications Grid -->
+                            <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                                <h2 style="color: #333; margin-bottom: 15px;">Specifications</h2>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+                                    <div>
+                                        <p style="color: #999; font-size: 12px; margin-bottom: 5px;">Body Type</p>
+                                        <p style="font-weight: bold;">${vehicle.body}</p>
+                                    </div>
+                                    <div>
+                                        <p style="color: #999; font-size: 12px; margin-bottom: 5px;">Color</p>
+                                        <p style="font-weight: bold;">${vehicle.color}</p>
+                                    </div>
+                                    <div>
+                                        <p style="color: #999; font-size: 12px; margin-bottom: 5px;">Drivetrain</p>
+                                        <p style="font-weight: bold;">${vehicle.drive}</p>
+                                    </div>
+                                    <div>
+                                        <p style="color: #999; font-size: 12px; margin-bottom: 5px;">Year</p>
+                                        <p style="font-weight: bold;">${vehicle.year}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Description -->
+                            <div style="margin-bottom: 30px;">
+                                <h2 style="color: #333; margin-bottom: 15px;">Description</h2>
+                                <p style="line-height: 1.8; color: #555; font-size: 16px;">${vehicle.description}</p>
+                            </div>
+                            
+                            <!-- Features -->
+                            <div style="margin-bottom: 30px;">
+                                <h2 style="color: #333; margin-bottom: 15px;">Features</h2>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+                                    ${vehicle.features.map(f => `
+                                        <div style="display: flex; align-items: center; gap: 10px; padding: 10px; background: #f9f9f9; border-radius: 5px;">
+                                            <span style="color: #b8965a; font-weight: bold;">✓</span>
+                                            <span>${f}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            
+                            <!-- History -->
+                            <div style="background: #e8f4f8; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                                <h2 style="color: #333; margin-bottom: 10px;">Vehicle History</h2>
+                                <p style="color: #555;">${vehicle.history}</p>
+                            </div>
+                            
+                            <!-- CTA -->
+                            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                <a href="tel:+17869279128" style="
+                                    flex: 1;
+                                    min-width: 150px;
+                                    padding: 15px 30px;
+                                    background: #b8965a;
+                                    color: white;
+                                    text-decoration: none;
+                                    border-radius: 5px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    transition: background 0.3s;
+                                " onmouseover="this.style.background='#a0804d'" onmouseout="this.style.background='#b8965a'">
+                                    📞 Call Now: (786) 927-9128
+                                </a>
+                                <a href="/" style="
+                                    flex: 1;
+                                    min-width: 150px;
+                                    padding: 15px 30px;
+                                    background: #f0f0f0;
+                                    color: #333;
+                                    text-decoration: none;
+                                    border-radius: 5px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    transition: background 0.3s;
+                                " onmouseover="this.style.background='#e0e0e0'" onmouseout="this.style.background='#f0f0f0'">
+                                    ← Back to Inventory
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize on page load
+        window.addEventListener('load', showPage);
+        window.addEventListener('popstate', showPage);
+
+        // Handle link clicks for client-side routing
+        document.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('/')) {
+                e.preventDefault();
+                window.history.pushState({}, '', e.target.getAttribute('href'));
+                showPage();
+            }
+        });
+    </script>
+</body>
+</html>
