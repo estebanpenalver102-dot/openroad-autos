@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found | OpenRoad Auto Group</title>
-<meta http-equiv="refresh" content="0; url=https://openroad-autos.com">
-<link rel="canonical" href="https://openroad-autos.com" />
-<script>window.location.replace("https://openroad-autos.com");</script>
-<style>
-body{background:#0a0a08;color:#faf9f6;font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center}
-a{color:#b8965a;text-decoration:none}
-</style>
+<meta charset="utf-8">
+<title>OpenRoad Auto Group</title>
+<script>
+// SPA redirect for GitHub Pages
+var pathSegmentsToKeep = 0;
+var l = window.location;
+l.replace(
+  l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+  l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+  l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+  (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+  l.hash
+);
+</script>
 </head>
-<body>
-<div>
-<h1 style="color:#b8965a;font-size:4rem;margin:0">404</h1>
-<p style="margin:1rem 0">Page not found.</p>
-<a href="https://openroad-autos.com">← Back to OpenRoad Auto Group</a>
-</div>
-</body>
+<body>Redirecting...</body>
 </html>
