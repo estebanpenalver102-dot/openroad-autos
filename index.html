@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://openroad-autos.com" />
 <meta name="description" content="OpenRoad Auto Group — Premium pre-owned vehicles in Opa Locka, FL. Honest pricing, financing available, bilingual service. Call (786) 927-9128.">
 <meta name="keywords" content="used cars Opa Locka FL, pre-owned vehicles Miami, car dealership Opa Locka, auto financing Florida, carros usados Miami">
 <meta property="og:title" content="OpenRoad Auto Group — Opa Locka, FL">
 <meta property="og:description" content="Premium pre-owned vehicles. Honest pricing. Bilingual service. Serving the greater Miami area.">
 <meta property="og:image" content="https://cardealercentral.blob.core.windows.net/cardealercentral/628f67d1-e760-488f-9720-c17b73fcdc89.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.openroad-autos.com">
+<meta property="og:url" content="https://openroad-autos.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cardealercentral.blob.core.windows.net/cardealercentral/628f67d1-e760-488f-9720-c17b73fcdc89.png">
 <link rel="icon" type="image/png" href="https://cardealercentral.blob.core.windows.net/cardealercentral/628f67d1-e760-488f-9720-c17b73fcdc89.png">
@@ -36,7 +37,7 @@ body{background:var(--black);color:var(--white);font-family:var(--font-sans);fon
 #nav.scrolled{background:rgba(10,10,8,0.94);backdrop-filter:blur(16px);border-bottom:.5px solid rgba(184,150,90,.2)}
 .nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 2rem}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
-.nav-logo img{height:72px;width:auto;object-fit:contain}
+.nav-logo img{height:46px;width:auto;object-fit:contain}
 .nav-links{display:flex;align-items:center;gap:2.5rem;list-style:none}
 .nav-links a{font-size:12px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-5);text-decoration:none;transition:color .3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .3s;transform-origin:left}
@@ -54,14 +55,7 @@ body{background:var(--black);color:var(--white);font-family:var(--font-sans);fon
 
 /* HERO */
 #hero{height:100vh;min-height:640px;position:relative;display:flex;align-items:flex-end;padding-bottom:8vh;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,8,.15) 0%,rgba(10,10,8,0) 30%,rgba(10,10,8,.82) 80%,var(--black) 100%),url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=1800&q=85&auto=format&fit=crop&crop=center') center/cover no-repeat}
-/* Plate logo overlay */
-
-
-
-
-
-
+.hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,8,.2) 0%,rgba(10,10,8,0) 35%,rgba(10,10,8,.75) 80%,var(--black) 100%),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1800&q=80&auto=format&fit=crop') center/cover no-repeat}
 .hero-lines{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .hero-line{position:absolute;background:var(--gold);opacity:.1}
 .hl1{width:1px;height:60%;top:0;left:38%}.hl2{width:40%;height:1px;bottom:38%;right:0}.hl3{width:1px;height:30%;bottom:0;right:25%;opacity:.06}
@@ -306,8 +300,6 @@ footer{background:var(--gray-1);border-top:.5px solid rgba(184,150,90,.15);paddi
 .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-/* Hero reveals instantly — no blocking dark-screen fade */
-#hero .fade-up{opacity:1;transform:none;transition:none}
 
 /* LANG */
 [data-lang="es"]{display:none}
@@ -318,69 +310,6 @@ body.lang-es [data-lang="es"]{display:block}
 @media(max-width:1024px){.why-grid,.financing-inner,.vapi-inner{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.tradein-inner{grid-template-columns:1fr;padding:2.5rem}}
 @media(max-width:768px){:root{--nav-h:60px}.nav-links,.nav-cta,.nav-lang{display:none}.nav-hamburger{display:flex}.hero-stats{display:none}.inventory-grid,.t-grid{grid-template-columns:1fr}.why-features,.spec-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}.cta-inner{flex-direction:column;text-align:center}.form-row{grid-template-columns:1fr}.time-slots{grid-template-columns:repeat(3,1fr)}section{padding:4rem 0}.contact-grid{grid-template-columns:1fr}.vapi-phone-mock{display:none}}
 @media(max-width:480px){.container{padding:0 1.25rem}.time-slots{grid-template-columns:repeat(2,1fr)}.hero-actions{flex-direction:column;align-items:flex-start}}
-
-/* ENHANCED VEHICLE INFO */
-.vehicle-details{display:flex;gap:.5rem;margin-bottom:.75rem;flex-wrap:wrap}
-.vehicle-detail{font-size:11px;color:var(--gray-4);padding:3px 8px;background:var(--gray-2);border:.5px solid rgba(184,150,90,.1)}
-.vehicle-detail span{color:var(--gold);margin-right:4px;font-weight:500}
-
-/* SEARCH BAR */
-.search-bar{background:var(--gray-1);border:.5px solid rgba(184,150,90,.2);padding:1.5rem 2rem;margin-bottom:2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;align-items:end}
-.search-bar .form-group{margin:0}
-.search-bar .form-select,.search-bar .form-input{padding:10px 12px;font-size:13px;width:100%}
-.search-bar .btn-primary{padding:10px 20px;font-size:11px;width:100%;text-align:center;justify-content:center}
-
-/* BODY TYPE GRID */
-.body-type-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:1rem;margin-top:2rem;margin-bottom:3rem}
-.body-type-card{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1.25rem 1rem;border:.5px solid rgba(184,150,90,.15);background:var(--gray-1);cursor:pointer;transition:all .3s;text-decoration:none}
-.body-type-card:hover{border-color:var(--gold);background:rgba(184,150,90,.05);transform:translateY(-2px)}
-.body-type-icon{font-size:1.75rem}
-.body-type-label{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-4);transition:color .3s}
-.body-type-card:hover .body-type-label{color:var(--gold)}
-
-/* PAYMENT CALCULATOR (in modal) */
-.payment-calc{background:var(--gray-2);border:.5px solid rgba(184,150,90,.2);padding:1.5rem;margin:1.5rem 0}
-.payment-calc-title{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
-.payment-calc-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem}
-.payment-calc-result{text-align:center;padding:1rem;background:rgba(184,150,90,.08);border:.5px solid rgba(184,150,90,.2);margin-top:1rem}
-.payment-calc-result .amount{font-family:var(--font-serif);font-size:2rem;color:var(--gold)}
-.payment-calc-result .per-month{font-size:11px;color:var(--gray-4);letter-spacing:.1em;text-transform:uppercase}
-.calc-input{background:var(--black);border:.5px solid rgba(184,150,90,.2);color:var(--white);padding:8px 10px;font-size:13px;font-family:var(--font-sans);width:100%;outline:none}
-.calc-input:focus{border-color:var(--gold)}
-.calc-label{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-4);margin-bottom:3px}
-
-/* STORE HOURS */
-.store-hours{margin-top:1rem}
-.store-hours-row{display:flex;justify-content:space-between;font-size:12px;color:var(--gray-4);padding:4px 0;border-bottom:.5px solid rgba(255,255,255,.04)}
-.store-hours-row .day{color:var(--gray-5)}
-.store-hours-row .hours{color:var(--gold)}
-
-/* VEHICLE DESCRIPTION ON CARD */
-.vehicle-desc-short{font-size:12px;color:var(--gray-4);line-height:1.6;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-
-/* ENHANCED MODAL */
-.modal-cta-row{display:flex;gap:.75rem;margin-bottom:1.5rem;flex-wrap:wrap}
-.modal-cta-btn{flex:1;min-width:140px;padding:12px 16px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-align:center;font-family:var(--font-sans);cursor:pointer;transition:all .3s;text-decoration:none;font-weight:500}
-.modal-cta-btn.primary{background:var(--gold);color:var(--black);border:none}
-.modal-cta-btn.primary:hover{background:var(--gold-light)}
-.modal-cta-btn.secondary{background:transparent;color:var(--gold);border:.5px solid rgba(184,150,90,.4)}
-.modal-cta-btn.secondary:hover{background:var(--gold);color:var(--black)}
-.modal-cta-btn.outline{background:transparent;color:var(--white);border:.5px solid rgba(255,255,255,.2)}
-.modal-cta-btn.outline:hover{border-color:var(--gold);color:var(--gold)}
-
-/* ENHANCED SPEC GRID */
-.spec-grid-enhanced{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.75rem;margin-bottom:1.5rem}
-.spec-box-enhanced{background:var(--gray-2);padding:.875rem;border-left:2px solid var(--gold)}
-.spec-box-enhanced .spec-key{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
-.spec-box-enhanced .spec-val{font-size:.95rem;font-family:var(--font-serif);color:var(--white)}
-
-/* VIN display */
-.vin-display{font-size:11px;color:var(--gray-4);letter-spacing:.05em;margin-bottom:1rem;padding:.5rem .75rem;background:var(--gray-2);display:inline-block;border:.5px solid rgba(184,150,90,.1)}
-.vin-display span{color:var(--gold);margin-right:6px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:9px}
-
-@media(max-width:768px){.search-bar{grid-template-columns:1fr}.body-type-grid{grid-template-columns:repeat(3,1fr)}.payment-calc-row{grid-template-columns:1fr}.modal-cta-row{flex-direction:column}.spec-grid-enhanced{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.body-type-grid{grid-template-columns:repeat(2,1fr)}}
-
 </style>
 </head>
 <body>
@@ -389,7 +318,7 @@ body.lang-es [data-lang="es"]{display:block}
 <nav id="nav" role="navigation">
   <div class="nav-inner">
     <a href="#" class="nav-logo" aria-label="OpenRoad Auto Group">
-      <img src="https://cardealercentral.blob.core.windows.net/cardealercentral/628f67d1-e760-488f-9720-c17b73fcdc89.png" alt="OpenRoad Auto Group" style="height:72px;width:auto;object-fit:contain">
+      <img src="https://cardealercentral.blob.core.windows.net/cardealercentral/628f67d1-e760-488f-9720-c17b73fcdc89.png" alt="OpenRoad Auto Group" style="height:46px;width:auto;object-fit:contain">
     </a>
     <ul class="nav-links">
       <li><a href="#inventory" data-lang="en">Inventory</a><a href="#inventory" data-lang="es">Inventario</a></li>
@@ -422,11 +351,6 @@ body.lang-es [data-lang="es"]{display:block}
 <!-- HERO -->
 <section id="hero" role="banner">
   <div class="hero-bg"></div>
-
-
-
-
-
   <div class="hero-lines" aria-hidden="true">
     <div class="hero-line hl1"></div><div class="hero-line hl2"></div><div class="hero-line hl3"></div>
   </div>
@@ -488,71 +412,6 @@ body.lang-es [data-lang="es"]{display:block}
       <a href="tel:+17869279128" class="btn-secondary fade-up" data-lang="en">Ask About Availability →</a>
       <a href="tel:+17869279128" class="btn-secondary fade-up" data-lang="es">Consultar Disponibilidad →</a>
     </div>
-    <!-- SEARCH BAR (AutoQuest-inspired) -->
-    <div class="search-bar" id="search-bar">
-      <div class="form-group">
-        <label class="calc-label" data-lang="en">Make</label>
-        <label class="calc-label" data-lang="es">Marca</label>
-        <select class="form-select" id="filter-make" onchange="applyFilters()">
-          <option value="">All Makes</option>
-          
-          <option value="chevrolet">Chevrolet</option>
-          <option value="ram">Ram</option>
-          <option value="honda">Honda</option>
-          <option value="hyundai">Hyundai</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="calc-label" data-lang="en">Body Type</label>
-        <label class="calc-label" data-lang="es">Tipo</label>
-        <select class="form-select" id="filter-body" onchange="applyFilters()">
-          <option value="">All Types</option>
-          <option value="convertible">Convertible</option>
-          <option value="pickup">Pickup / Truck</option>
-          <option value="sedan">Sedan</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="calc-label" data-lang="en">Max Price</label>
-        <label class="calc-label" data-lang="es">Precio Máx</label>
-        <select class="form-select" id="filter-price" onchange="applyFilters()">
-          <option value="">Any Price</option>
-          <option value="15000">Under $15,000</option>
-          <option value="20000">Under $20,000</option>
-          <option value="30000">Under $30,000</option>
-          <option value="50000">Under $50,000</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="calc-label" data-lang="en">Year</label>
-        <label class="calc-label" data-lang="es">Año</label>
-        <select class="form-select" id="filter-year" onchange="applyFilters()">
-          <option value="">Any Year</option>
-          <option value="2021">2021+</option>
-          <option value="2019">2019+</option>
-          <option value="2017">2017+</option>
-        </select>
-      </div>
-      <button class="btn-primary" onclick="resetFilters()" data-lang="en">Reset</button>
-      <button class="btn-primary" onclick="resetFilters()" data-lang="es">Limpiar</button>
-    </div>
-
-    <!-- BODY TYPE BROWSE (AutoQuest-inspired) -->
-    <div class="body-type-grid" data-lang="en">
-      <a class="body-type-card" onclick="filterByBody('convertible')"><div class="body-type-icon">🏎️</div><div class="body-type-label">Convertible</div></a>
-      <a class="body-type-card" onclick="filterByBody('pickup')"><div class="body-type-icon">🛻</div><div class="body-type-label">Pickup</div></a>
-      <a class="body-type-card" onclick="filterByBody('sedan')"><div class="body-type-icon">🚗</div><div class="body-type-label">Sedan</div></a>
-      <a class="body-type-card" onclick="filterByBody('suv')"><div class="body-type-icon">🚙</div><div class="body-type-label">SUV</div></a>
-      <a class="body-type-card" onclick="filterByBody('')"><div class="body-type-icon">✦</div><div class="body-type-label">All</div></a>
-    </div>
-    <div class="body-type-grid" data-lang="es">
-      <a class="body-type-card" onclick="filterByBody('convertible')"><div class="body-type-icon">🏎️</div><div class="body-type-label">Convertible</div></a>
-      <a class="body-type-card" onclick="filterByBody('pickup')"><div class="body-type-icon">🛻</div><div class="body-type-label">Camioneta</div></a>
-      <a class="body-type-card" onclick="filterByBody('sedan')"><div class="body-type-icon">🚗</div><div class="body-type-label">Sedán</div></a>
-      <a class="body-type-card" onclick="filterByBody('suv')"><div class="body-type-icon">🚙</div><div class="body-type-label">SUV</div></a>
-      <a class="body-type-card" onclick="filterByBody('')"><div class="body-type-icon">✦</div><div class="body-type-label">Todos</div></a>
-    </div>
-
     <div class="inventory-filters" role="group">
       <button class="filter-btn active" onclick="filterCards(this,'all')" data-lang="en">All Vehicles</button>
       <button class="filter-btn active" onclick="filterCards(this,'all')" data-lang="es">Todos</button>
@@ -563,138 +422,133 @@ body.lang-es [data-lang="es"]{display:block}
     </div>
     <div class="inventory-grid" id="inventory-grid">
 
-      <!-- BENTLEY CONTINENTAL -->
-      <!-- CHEVROLET SILVERADO -->
-      <article class="vehicle-card fade-up d1" data-price="28500" data-category="trucks" data-make="chevrolet" data-body="pickup" data-year="2017" onclick="openModal('chevroletsilverado')">
-        <div class="v-wrap">
-          <img class="v-img" id="chevroletsilverado-card-img"
-            src="images/silverado.jpg"
-            alt="2017 Chevrolet Silverado LT" loading="eager">
-          <div class="vehicle-badge">Work Ready</div>
-        </div>
-        <div class="vehicle-body">
-          <p class="vehicle-make">Chevrolet · 2017</p>
-          <h3 class="vehicle-model">Silverado LT</h3>
-          <div class="vehicle-specs">
-            <span class="vehicle-spec">87,863 mi</span>
-            <span class="vehicle-spec">Clean Title</span>
-            <span class="vehicle-spec">V8 5.3L</span>
+      
+<article class="vehicle-card fade-up" data-price="27500" onclick="document.getElementById('modal-722063').classList.add('open');document.body.style.overflow='hidden'">
+              <div class="v-wrap">
+                <div class="v-img" style="background:linear-gradient(135deg,#111,#0a0a0a);display:flex;align-items:center;justify-content:center;color:rgba(184,150,90,.25);font-size:3.5rem;min-height:220px;">◈</div>
+                <div class="vehicle-badge">Premium</div>
+              </div>
+              <div class="vehicle-body">
+                <p class="vehicle-make">Ram &middot; 2019</p>
+                <h3 class="vehicle-model">1500 Crew Cab Rebel</h3>
+                <div class="vehicle-specs">
+                  <span class="vehicle-spec">131,854 mi</span>
+                  <span class="vehicle-spec">Pickup Truck</span>
+                  <span class='vehicle-spec'>White / Black</span>
+                </div>
+                <div class="vehicle-price">
+                  <div>
+                    <div class="vehicle-price-main">$27,500</div>
+                    <div class="vehicle-price-mo">Est. $539/mo</div>
+                  </div>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-722063').classList.add('open');document.body.style.overflow='hidden'" data-lang="en">View Details</button>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-722063').classList.add('open');document.body.style.overflow='hidden'" data-lang="es">Ver Detalles</button>
+                </div>
+              </div>
+            </article>
+<article class="vehicle-card fade-up d1" data-price="13050" onclick="document.getElementById('modal-027409').classList.add('open');document.body.style.overflow='hidden'">
+              <div class="v-wrap">
+                <div class="v-img" style="background:linear-gradient(135deg,#111,#0a0a0a);display:flex;align-items:center;justify-content:center;color:rgba(184,150,90,.25);font-size:3.5rem;min-height:220px;">◈</div>
+                <div class="vehicle-badge">Fuel Efficient</div>
+              </div>
+              <div class="vehicle-body">
+                <p class="vehicle-make">Hyundai &middot; 2021</p>
+                <h3 class="vehicle-model">Sonata Hybrid Sel</h3>
+                <div class="vehicle-specs">
+                  <span class="vehicle-spec">112,900 mi</span>
+                  <span class="vehicle-spec">Sedan</span>
+                  
+                </div>
+                <div class="vehicle-price">
+                  <div>
+                    <div class="vehicle-price-main">$13,050</div>
+                    <div class="vehicle-price-mo">Est. $256/mo</div>
+                  </div>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-027409').classList.add('open');document.body.style.overflow='hidden'" data-lang="en">View Details</button>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-027409').classList.add('open');document.body.style.overflow='hidden'" data-lang="es">Ver Detalles</button>
+                </div>
+              </div>
+            </article>
+<article class="vehicle-card fade-up d2" data-price="14500" onclick="document.getElementById('modal-400745').classList.add('open');document.body.style.overflow='hidden'">
+              <div class="v-wrap">
+                <div class="v-img" style="background:linear-gradient(135deg,#111,#0a0a0a);display:flex;align-items:center;justify-content:center;color:rgba(184,150,90,.25);font-size:3.5rem;min-height:220px;">◈</div>
+                <div class="vehicle-badge">Great Condition</div>
+              </div>
+              <div class="vehicle-body">
+                <p class="vehicle-make">Honda &middot; 2017</p>
+                <h3 class="vehicle-model">Civic Ex-l W/navigation</h3>
+                <div class="vehicle-specs">
+                  <span class="vehicle-spec">151,380 mi</span>
+                  <span class="vehicle-spec">Hatchback</span>
+                  
+                </div>
+                <div class="vehicle-price">
+                  <div>
+                    <div class="vehicle-price-main">$14,500</div>
+                    <div class="vehicle-price-mo">Est. $284/mo</div>
+                  </div>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-400745').classList.add('open');document.body.style.overflow='hidden'" data-lang="en">View Details</button>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-400745').classList.add('open');document.body.style.overflow='hidden'" data-lang="es">Ver Detalles</button>
+                </div>
+              </div>
+            </article>
+<article class="vehicle-card fade-up d3" data-price="28000" onclick="document.getElementById('modal-256265').classList.add('open');document.body.style.overflow='hidden'">
+              <div class="v-wrap">
+                <div class="v-img" style="background:linear-gradient(135deg,#111,#0a0a0a);display:flex;align-items:center;justify-content:center;color:rgba(184,150,90,.25);font-size:3.5rem;min-height:220px;">◈</div>
+                <div class="vehicle-badge">Premium</div>
+              </div>
+              <div class="vehicle-body">
+                <p class="vehicle-make">Chevrolet &middot; 2017</p>
+                <h3 class="vehicle-model">Silverado 1500 Crew Cab Lt</h3>
+                <div class="vehicle-specs">
+                  <span class="vehicle-spec">87,863 mi</span>
+                  <span class="vehicle-spec">Pickup Truck</span>
+                  <span class='vehicle-spec'>Gray / Black</span>
+                </div>
+                <div class="vehicle-price">
+                  <div>
+                    <div class="vehicle-price-main">$28,000</div>
+                    <div class="vehicle-price-mo">Est. $549/mo</div>
+                  </div>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-256265').classList.add('open');document.body.style.overflow='hidden'" data-lang="en">View Details</button>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-256265').classList.add('open');document.body.style.overflow='hidden'" data-lang="es">Ver Detalles</button>
+                </div>
+              </div>
+            </article>
+<article class="vehicle-card fade-up d4" data-price="42500" onclick="document.getElementById('modal-044423').classList.add('open');document.body.style.overflow='hidden'">
+              <div class="v-wrap">
+                <img class="v-img" src="https://cardealercentral.blob.core.windows.net/cardealercentral/5d0225a1-323b-4ad3-9b78-b9330486c2f2.jpg" alt="2007 Bentley Continental Gtc" loading="lazy">
+                <div class="vehicle-badge">Luxury &middot; Low Miles</div>
+              </div>
+              <div class="vehicle-body">
+                <p class="vehicle-make">Bentley &middot; 2007</p>
+                <h3 class="vehicle-model">Continental Gtc</h3>
+                <div class="vehicle-specs">
+                  <span class="vehicle-spec">11,278 mi</span>
+                  <span class="vehicle-spec">Convertible</span>
+                  <span class='vehicle-spec'>Gray / Beige</span>
+                </div>
+                <div class="vehicle-price">
+                  <div>
+                    <div class="vehicle-price-main">$42,500</div>
+                    <div class="vehicle-price-mo">Est. $833/mo</div>
+                  </div>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-044423').classList.add('open');document.body.style.overflow='hidden'" data-lang="en">View Details</button>
+                  <button class="vehicle-cta" onclick="event.stopPropagation();document.getElementById('modal-044423').classList.add('open');document.body.style.overflow='hidden'" data-lang="es">Ver Detalles</button>
+                </div>
+              </div>
+            </article>
+            <article class="vehicle-card fade-up d4" style="display:flex;align-items:center;justify-content:center;min-height:300px;border-style:dashed">
+              <div style="text-align:center;padding:2rem">
+                <div style="font-family:var(--font-serif);font-size:3rem;color:rgba(184,150,90,.2);margin-bottom:1rem">+</div>
+                <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-4);margin-bottom:1rem" data-lang="en">More inventory arriving soon</p>
+                <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-4);margin-bottom:1rem" data-lang="es">M&aacute;s inventario pr&oacute;ximamente</p>
+                <a href="tel:+17869279128" class="btn-secondary" data-lang="en">Call for availability &rarr;</a>
+                <a href="tel:+17869279128" class="btn-secondary" data-lang="es">Llame para disponibilidad &rarr;</a>
+              </div>
+            </article>
           </div>
-          <div class="vehicle-details">
-            <span class="vehicle-detail"><span>Body:</span>Pickup</span>
-            <span class="vehicle-detail"><span>Color:</span>White</span>
-            <span class="vehicle-detail"><span>Drive:</span>4WD</span>
-          </div>
-          <p class="vehicle-desc-short">A dependable work-ready Silverado LT with a proven V8 engine. Well-maintained, clean title, and ready for whatever job you throw at it.</p>
-          <div class="vehicle-price">
-            <div><div class="vehicle-price-main">$28,500</div><div class="vehicle-price-mo">Est. $551/mo</div></div>
-            <button class="vehicle-cta" onclick="event.stopPropagation();openModal('chevroletsilverado')" data-lang="en">View Details</button>
-            <button class="vehicle-cta" onclick="event.stopPropagation();openModal('chevroletsilverado')" data-lang="es">Ver Detalles</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- RAM 1500 -->
-      <article class="vehicle-card fade-up d2" data-price="27500" data-category="trucks" data-make="ram" data-body="pickup" data-year="2019" onclick="openModal('ram1500')">
-        <div class="v-wrap">
-          <img class="v-img" id="ram1500-card-img"
-            src="images/ram1500.jpg"
-            alt="2019 Ram 1500 Rebel, Sport 2TL Pkg, Rebel 2TW Pkg" loading="eager">
-          <div class="vehicle-badge">Certified Pre-Owned</div>
-        </div>
-        <div class="vehicle-body">
-          <p class="vehicle-make">Ram · 2019</p>
-          <h3 class="vehicle-model">1500 Rebel, Sport 2TL Pkg, Rebel 2TW Pkg</h3>
-          <div class="vehicle-specs">
-            <span class="vehicle-spec">131,854 mi</span>
-            <span class="vehicle-spec">Clean Title</span>
-            <span class="vehicle-spec">V8 5.7L HEMI</span>
-          </div>
-          <div class="vehicle-details">
-            <span class="vehicle-detail"><span>Body:</span>Pickup 4D</span>
-            <span class="vehicle-detail"><span>Color:</span>Black</span>
-            <span class="vehicle-detail"><span>Drive:</span>4WD</span>
-          </div>
-          <p class="vehicle-desc-short">A bold 2019 Ram 1500 Rebel with Sport and Rebel packages. HEMI V8 power meets off-road capability in this aggressive yet refined pickup.</p>
-          <div class="vehicle-price">
-            <div><div class="vehicle-price-main">$27,500</div><div class="vehicle-price-mo">Est. $532/mo</div></div>
-            <button class="vehicle-cta" onclick="event.stopPropagation();openModal('ram1500')" data-lang="en">View Details</button>
-            <button class="vehicle-cta" onclick="event.stopPropagation();openModal('ram1500')" data-lang="es">Ver Detalles</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- HONDA CIVIC -->
-      <article class="vehicle-card fade-up d3" data-price="14500" data-category="under20" data-make="honda" data-body="sedan" data-year="2017" onclick="openModal('hondacivic')">
-        <div class="v-wrap">
-          <img class="v-img" id="hondacivic-card-img"
-            src="images/civic.jpg"
-            alt="2017 Honda Civic EX-L" loading="eager">
-          <div class="vehicle-badge">Reliable · Clean</div>
-        </div>
-        <div class="vehicle-body">
-          <p class="vehicle-make">Honda · 2017</p>
-          <h3 class="vehicle-model">Civic EX-L</h3>
-          <div class="vehicle-specs">
-            <span class="vehicle-spec">151,380 mi</span>
-            <span class="vehicle-spec">Clean Title</span>
-            <span class="vehicle-spec">1.5L Turbo</span>
-          </div>
-          <div class="vehicle-details">
-            <span class="vehicle-detail"><span>Body:</span>Sedan</span>
-            <span class="vehicle-detail"><span>Color:</span>Gray</span>
-            <span class="vehicle-detail"><span>Drive:</span>FWD</span>
-          </div>
-          <p class="vehicle-desc-short">A reliable Honda Civic EX-L with leather interior, sunroof, and Honda's proven 1.5L turbo engine. Excellent fuel economy meets premium comfort.</p>
-          <div class="vehicle-price">
-            <div><div class="vehicle-price-main">$14,500</div><div class="vehicle-price-mo">Est. $280/mo</div></div>
-            <button class="vehicle-cta" onclick="event.stopPropagation();openModal('hondacivic')" data-lang="en">View Details</button>
-            <button class="vehicle-cta" onclick="event.stopPropagation();openModal('hondacivic')" data-lang="es">Ver Detalles</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- HYUNDAI SONATA -->
-      <article class="vehicle-card fade-up d4" data-price="13050" data-category="under20" data-make="hyundai" data-body="sedan" data-year="2021" onclick="openModal('hyundaisonata')">
-        <div class="v-wrap">
-          <img class="v-img" id="hyundaisonata-card-img"
-            src="images/sonata.jpg"
-            alt="2021 Hyundai Sonata SEL" loading="eager">
-          <div class="vehicle-badge">Great Fuel Economy</div>
-        </div>
-        <div class="vehicle-body">
-          <p class="vehicle-make">Hyundai · 2021</p>
-          <h3 class="vehicle-model">Sonata SEL</h3>
-          <div class="vehicle-specs">
-            <span class="vehicle-spec">112,900 mi</span>
-            <span class="vehicle-spec">Clean Title</span>
-            <span class="vehicle-spec">2.5L 4-Cyl</span>
-          </div>
-          <div class="vehicle-details">
-            <span class="vehicle-detail"><span>Body:</span>Sedan</span>
-            <span class="vehicle-detail"><span>Color:</span>Blue</span>
-            <span class="vehicle-detail"><span>Drive:</span>FWD</span>
-          </div>
-          <p class="vehicle-desc-short">A sleek 2021 Hyundai Sonata SEL with modern safety tech, Apple CarPlay, and outstanding fuel efficiency. Stylish design inside and out.</p>
-          <div class="vehicle-price">
-            <div><div class="vehicle-price-main">$13,050</div><div class="vehicle-price-mo">Est. $252/mo</div></div>
-            <button class="vehicle-cta" onclick="event.stopPropagation();openModal('hyundaisonata')" data-lang="en">View Details</button>
-            <button class="vehicle-cta" onclick="event.stopPropagation();openModal('hyundaisonata')" data-lang="es">Ver Detalles</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- COMING SOON -->
-      <article class="vehicle-card fade-up d3" style="display:flex;align-items:center;justify-content:center;min-height:300px;border-style:dashed">
-        <div style="text-align:center;padding:2rem">
-          <div style="font-family:var(--font-serif);font-size:3rem;color:rgba(184,150,90,.2);margin-bottom:1rem">+</div>
-          <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-4);margin-bottom:1rem" data-lang="en">More inventory arriving soon</p>
-          <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-4);margin-bottom:1rem" data-lang="es">Más inventario próximamente</p>
-          <a href="tel:+17869279128" class="btn-secondary" data-lang="en">Call for availability →</a>
-          <a href="tel:+17869279128" class="btn-secondary" data-lang="es">Llame para disponibilidad →</a>
-        </div>
-      </article>
-    </div>
+  </div>
 </section>
 
 <!-- WHY -->
@@ -760,26 +614,8 @@ body.lang-es [data-lang="es"]{display:block}
           <div class="success-msg" id="finance-success" data-lang="en">✓ Application received! We'll contact you within 1 business hour.</div>
           <div class="success-msg" id="finance-success-es" data-lang="es">✓ ¡Solicitud recibida! Nos comunicaremos contigo en 1 hora hábil.</div>
         </form>
-        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(184,150,90,.2);text-align:center">
-          <p style="font-size:12px;color:var(--gray-4);margin-bottom:.75rem" data-lang="en">Need a complete credit application?</p>
-          <p style="font-size:12px;color:var(--gray-4);margin-bottom:.75rem" data-lang="es">¿Necesita una solicitud de crédito completa?</p>
-          <a href="https://app.dealercenter.net/creditapp/openroad-auto-group" target="_blank" rel="noopener" class="btn-secondary" style="display:inline-block;font-size:13px;padding:.75rem 1.5rem" data-lang="en">Full Credit Application (Powered by DealerCenter)</a>
-          <a href="https://app.dealercenter.net/creditapp/openroad-auto-group" target="_blank" rel="noopener" class="btn-secondary" style="display:inline-block;font-size:13px;padding:.75rem 1.5rem" data-lang="es">Solicitud de Crédito Completa (DealerCenter)</a>
-        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CREDIT BANNER (AutoQuest-inspired) -->
-<section style="background:var(--gray-2);padding:3rem 0;border-top:.5px solid rgba(184,150,90,.2);border-bottom:.5px solid rgba(184,150,90,.2)">
-  <div class="container" style="text-align:center">
-    <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-weight:300;margin-bottom:.5rem;color:var(--white)" data-lang="en">Good Credit, Bad Credit, First Time Buyer?</h3>
-    <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-weight:300;margin-bottom:.5rem;color:var(--white)" data-lang="es">¿Buen crédito, mal crédito, primera vez?</h3>
-    <p style="font-size:13px;color:var(--gray-4);margin-bottom:1.5rem" data-lang="en">With relationships with multiple lenders, we can get you financed. All credit types and situations welcome.</p>
-    <p style="font-size:13px;color:var(--gray-4);margin-bottom:1.5rem" data-lang="es">Con relaciones con múltiples prestamistas, podemos financiarte. Todos los tipos de crédito son bienvenidos.</p>
-    <a href="#financing" class="btn-primary" data-lang="en">Apply for Credit Today →</a>
-    <a href="#financing" class="btn-primary" data-lang="es">Aplicar para Crédito Hoy →</a>
   </div>
 </section>
 
@@ -976,16 +812,7 @@ body.lang-es [data-lang="es"]{display:block}
         </div>
       </div>
       <div>
-        <div class="footer-col-title" data-lang="en">Store Hours</div>
-            <div class="footer-col-title" data-lang="es">Horario</div>
-            <div class="store-hours">
-              <div class="store-hours-row"><span class="day">Mon – Fri</span><span class="hours">9:00 AM – 7:00 PM</span></div>
-              <div class="store-hours-row"><span class="day">Saturday</span><span class="hours">10:00 AM – 6:00 PM</span></div>
-              <div class="store-hours-row"><span class="day">Sunday</span><span class="hours">Closed</span></div>
-            </div>
-          </div>
-          <div>
-            <div class="footer-col-title" data-lang="en">Quick Links</div>
+        <div class="footer-col-title" data-lang="en">Quick Links</div>
         <div class="footer-col-title" data-lang="es">Enlaces</div>
         <ul class="footer-links">
           <li><a href="#inventory" data-lang="en">Inventory</a><a href="#inventory" data-lang="es">Inventario</a></li>
@@ -1025,7 +852,147 @@ body.lang-es [data-lang="es"]{display:block}
 </footer>
 
 <!-- VEHICLE MODALS -->
-<!-- BENTLEY MODAL -->
+<div class="modal-overlay" id="modal-722063" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow=''}">
+      <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" onclick="document.getElementById('modal-722063').classList.remove('open');document.body.style.overflow=''" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Ram &middot; 2019 &middot; 1C6SRFLTXKN722063</p>
+          <h2 class="modal-vehicle-title">1500 Crew Cab Rebel</h2>
+          <div class="modal-price">$27,500 &middot; Est. $539/mo</div>
+        </div>
+        
+        <div class="modal-body">
+          <div class="spec-grid">
+            <div class="spec-box"><div class="spec-key">Mileage</div><div class="spec-val">131,854 mi</div></div>
+            <div class="spec-box"><div class="spec-key">Body Style</div><div class="spec-val">Pickup Truck</div></div>
+            <div class='spec-box'><div class='spec-key'>Exterior</div><div class='spec-val'>White</div></div>
+            <div class='spec-box'><div class='spec-key'>Interior</div><div class='spec-val'>Black</div></div>
+            <div class="spec-box"><div class="spec-key">Stock #</div><div class="spec-val">722063</div></div>
+            <div class="spec-box"><div class="spec-key">VIN</div><div class="spec-val">1C6SRFLTXKN722063</div></div>
+            <div class="spec-box"><div class="spec-key">Status</div><div class="spec-val">Coming Soon</div></div>
+          </div>
+          <div class="modal-actions">
+            <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call About This Car &rarr;</a>
+            <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar Sobre Este Auto &rarr;</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-722063').classList.remove('open');document.body.style.overflow=''" data-lang="en">Schedule Test Drive</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-722063').classList.remove('open');document.body.style.overflow=''" data-lang="es">Agendar Prueba</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="modal-overlay" id="modal-027409" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow=''}">
+      <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" onclick="document.getElementById('modal-027409').classList.remove('open');document.body.style.overflow=''" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Hyundai &middot; 2021 &middot; KMHL34JJ4MA027409</p>
+          <h2 class="modal-vehicle-title">Sonata Hybrid Sel</h2>
+          <div class="modal-price">$13,050 &middot; Est. $256/mo</div>
+        </div>
+        
+        <div class="modal-body">
+          <div class="spec-grid">
+            <div class="spec-box"><div class="spec-key">Mileage</div><div class="spec-val">112,900 mi</div></div>
+            <div class="spec-box"><div class="spec-key">Body Style</div><div class="spec-val">Sedan</div></div>
+            
+            
+            <div class="spec-box"><div class="spec-key">Stock #</div><div class="spec-val">027409</div></div>
+            <div class="spec-box"><div class="spec-key">VIN</div><div class="spec-val">KMHL34JJ4MA027409</div></div>
+            <div class="spec-box"><div class="spec-key">Status</div><div class="spec-val">Coming Soon</div></div>
+          </div>
+          <div class="modal-actions">
+            <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call About This Car &rarr;</a>
+            <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar Sobre Este Auto &rarr;</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-027409').classList.remove('open');document.body.style.overflow=''" data-lang="en">Schedule Test Drive</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-027409').classList.remove('open');document.body.style.overflow=''" data-lang="es">Agendar Prueba</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="modal-overlay" id="modal-400745" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow=''}">
+      <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" onclick="document.getElementById('modal-400745').classList.remove('open');document.body.style.overflow=''" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Honda &middot; 2017 &middot; SHHFK7H77HU400745</p>
+          <h2 class="modal-vehicle-title">Civic Ex-l W/navigation</h2>
+          <div class="modal-price">$14,500 &middot; Est. $284/mo</div>
+        </div>
+        
+        <div class="modal-body">
+          <div class="spec-grid">
+            <div class="spec-box"><div class="spec-key">Mileage</div><div class="spec-val">151,380 mi</div></div>
+            <div class="spec-box"><div class="spec-key">Body Style</div><div class="spec-val">Hatchback</div></div>
+            
+            
+            <div class="spec-box"><div class="spec-key">Stock #</div><div class="spec-val">400745</div></div>
+            <div class="spec-box"><div class="spec-key">VIN</div><div class="spec-val">SHHFK7H77HU400745</div></div>
+            <div class="spec-box"><div class="spec-key">Status</div><div class="spec-val">Coming Soon</div></div>
+          </div>
+          <div class="modal-actions">
+            <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call About This Car &rarr;</a>
+            <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar Sobre Este Auto &rarr;</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-400745').classList.remove('open');document.body.style.overflow=''" data-lang="en">Schedule Test Drive</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-400745').classList.remove('open');document.body.style.overflow=''" data-lang="es">Agendar Prueba</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="modal-overlay" id="modal-256265" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow=''}">
+      <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" onclick="document.getElementById('modal-256265').classList.remove('open');document.body.style.overflow=''" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Chevrolet &middot; 2017 &middot; 3GCUKREC6HG256265</p>
+          <h2 class="modal-vehicle-title">Silverado 1500 Crew Cab Lt</h2>
+          <div class="modal-price">$28,000 &middot; Est. $549/mo</div>
+        </div>
+        
+        <div class="modal-body">
+          <div class="spec-grid">
+            <div class="spec-box"><div class="spec-key">Mileage</div><div class="spec-val">87,863 mi</div></div>
+            <div class="spec-box"><div class="spec-key">Body Style</div><div class="spec-val">Pickup Truck</div></div>
+            <div class='spec-box'><div class='spec-key'>Exterior</div><div class='spec-val'>Gray</div></div>
+            <div class='spec-box'><div class='spec-key'>Interior</div><div class='spec-val'>Black</div></div>
+            <div class="spec-box"><div class="spec-key">Stock #</div><div class="spec-val">256265</div></div>
+            <div class="spec-box"><div class="spec-key">VIN</div><div class="spec-val">3GCUKREC6HG256265</div></div>
+            <div class="spec-box"><div class="spec-key">Status</div><div class="spec-val">Coming Soon</div></div>
+          </div>
+          <div class="modal-actions">
+            <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call About This Car &rarr;</a>
+            <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar Sobre Este Auto &rarr;</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-256265').classList.remove('open');document.body.style.overflow=''" data-lang="en">Schedule Test Drive</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-256265').classList.remove('open');document.body.style.overflow=''" data-lang="es">Agendar Prueba</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="modal-overlay" id="modal-044423" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow=''}">
+      <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" onclick="document.getElementById('modal-044423').classList.remove('open');document.body.style.overflow=''" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Bentley &middot; 2007 &middot; SCBDR33W97C044423</p>
+          <h2 class="modal-vehicle-title">Continental Gtc</h2>
+          <div class="modal-price">$42,500 &middot; Est. $833/mo</div>
+        </div>
+        <img class="modal-img-main" src="https://cardealercentral.blob.core.windows.net/cardealercentral/5d0225a1-323b-4ad3-9b78-b9330486c2f2.jpg" alt="2007 Bentley Continental Gtc">
+        <div class="modal-body">
+          <div class="spec-grid">
+            <div class="spec-box"><div class="spec-key">Mileage</div><div class="spec-val">11,278 mi</div></div>
+            <div class="spec-box"><div class="spec-key">Body Style</div><div class="spec-val">Convertible</div></div>
+            <div class='spec-box'><div class='spec-key'>Exterior</div><div class='spec-val'>Gray</div></div>
+            <div class='spec-box'><div class='spec-key'>Interior</div><div class='spec-val'>Beige</div></div>
+            <div class="spec-box"><div class="spec-key">Stock #</div><div class="spec-val">00001</div></div>
+            <div class="spec-box"><div class="spec-key">VIN</div><div class="spec-val">SCBDR33W97C044423</div></div>
+            <div class="spec-box"><div class="spec-key">Status</div><div class="spec-val">Available</div></div>
+          </div>
+          <div class="modal-actions">
+            <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call About This Car &rarr;</a>
+            <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar Sobre Este Auto &rarr;</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-044423').classList.remove('open');document.body.style.overflow=''" data-lang="en">Schedule Test Drive</a>
+            <a href="#appointment" class="btn-secondary" onclick="document.getElementById('modal-044423').classList.remove('open');document.body.style.overflow=''" data-lang="es">Agendar Prueba</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
 <!-- AI WIDGET -->
 <div class="ai-widget" role="complementary" aria-label="AI Assistant">
   <div class="ai-popup" id="ai-popup">
@@ -1069,14 +1036,17 @@ function toggleLang(){lang=lang==='en'?'es':'en';document.body.classList.toggle(
 
 // MODALS
 function openModal(id){document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden'}
-
-function closeModal(id){var el=(typeof id==='string')?document.getElementById('modal-'+id):id;if(el){el.classList.remove('open');document.body.style.overflow=''}}
+function closeModal(id){document.getElementById('modal-'+id).classList.remove('open');document.body.style.overflow=''}
 function closeModalOutside(e){if(e.target===e.currentTarget){e.currentTarget.classList.remove('open');document.body.style.overflow=''}}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(m=>{m.classList.remove('open');document.body.style.overflow=''});document.getElementById('ai-popup').classList.remove('open')}});
 
-function switchCard(v,i){,200);document.querySelectorAll('#bentley-dots .gdot').forEach((d,j)=>d.classList.toggle('active',j===i))}}
+// BENTLEY CARD GALLERY
+const bentleyPhotos=['https://cardealercentral.blob.core.windows.net/cardealercentral/5d0225a1-323b-4ad3-9b78-b9330486c2f2.jpg','https://cardealercentral.blob.core.windows.net/cardealercentral/75882688-3a4d-4a94-9f7f-d0325ec3569c.jpg','https://cardealercentral.blob.core.windows.net/cardealercentral/4a40348d-c337-4eab-a6a9-dc79b1fabe2d.jpg','https://cardealercentral.blob.core.windows.net/cardealercentral/1167ca73-ff51-4f45-ac3b-29b018c9e8e9.jpg'];
+function switchCard(v,i){if(v==='bentley'){const img=document.getElementById('bentley-card-img');img.style.opacity='0';setTimeout(()=>{img.src=bentleyPhotos[i];img.style.opacity='1'},200);document.querySelectorAll('#bentley-dots .gdot').forEach((d,j)=>d.classList.toggle('active',j===i))}}
 
-function setModalPhoto(v,i){,200);document.querySelectorAll('#bentley-modal-dots button').forEach((b,j)=>b.style.background=j===i?'var(--gold)':'rgba(255,255,255,.3)');document.querySelectorAll('#bentley-thumbs img').forEach((t,j)=>{t.classList.toggle('active',j===i);t.style.opacity=j===i?'1':'0.6'})}}
+// BENTLEY MODAL GALLERY
+const bentleyModalPhotos=[...bentleyPhotos,'https://cardealercentral.blob.core.windows.net/cardealercentral/6b8549db-1374-4d9c-8526-36220cb90e62.jpg'];
+function setModalPhoto(v,i){if(v==='bentley'){const m=document.getElementById('bentley-main-img');m.style.opacity='0';setTimeout(()=>{m.src=bentleyModalPhotos[i];m.style.opacity='1'},200);document.querySelectorAll('#bentley-modal-dots button').forEach((b,j)=>b.style.background=j===i?'var(--gold)':'rgba(255,255,255,.3)');document.querySelectorAll('#bentley-thumbs img').forEach((t,j)=>{t.classList.toggle('active',j===i);t.style.opacity=j===i?'1':'0.6'})}}
 
 // FILTERS
 function filterCards(btn,f){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.vehicle-card').forEach(c=>{if(f==='all'){c.style.display='';return}const p=parseInt(c.dataset.price||0),cat=c.dataset.category||'';let show=false;if(f==='under10'&&p<10000)show=true;if(f==='luxury'&&cat==='luxury')show=true;c.style.display=show?'':'none'})}
@@ -1091,165 +1061,9 @@ function submitForm(e,id){e.preventDefault();const el=document.getElementById(id
 function toggleAI(){document.getElementById('ai-popup').classList.toggle('open')}
 
 // SCROLL ANIMATIONS
-const obs=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')}),{threshold:0,rootMargin:'0px 0px 0px 0px'});
+const obs=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-document.querySelectorAll('#hero .fade-up').forEach(el=>el.classList.add('visible'));
-
-// ENHANCED SEARCH FILTERS
-function applyFilters(){
-  const make=document.getElementById('filter-make').value;
-  const body=document.getElementById('filter-body').value;
-  const maxPrice=parseInt(document.getElementById('filter-price').value)||Infinity;
-  const minYear=parseInt(document.getElementById('filter-year').value)||0;
-  document.querySelectorAll('.vehicle-card[data-make]').forEach(c=>{
-    const cMake=c.dataset.make||'';
-    const cBody=c.dataset.body||'';
-    const cPrice=parseInt(c.dataset.price)||0;
-    const cYear=parseInt(c.dataset.year)||0;
-    let show=true;
-    if(make&&cMake!==make)show=false;
-    if(body&&cBody!==body)show=false;
-    if(cPrice>maxPrice)show=false;
-    if(cYear<minYear)show=false;
-    c.style.display=show?'':'none';
-  });
-}
-function resetFilters(){
-  document.getElementById('filter-make').value='';
-  document.getElementById('filter-body').value='';
-  document.getElementById('filter-price').value='';
-  document.getElementById('filter-year').value='';
-  document.querySelectorAll('.vehicle-card').forEach(c=>c.style.display='');
-}
-function filterByBody(body){
-  document.getElementById('filter-body').value=body;
-  applyFilters();
-}
-
-// PAYMENT CALCULATOR
-function calcPayment(vehicle){
-  const priceEl=document.getElementById('calc-price-'+vehicle);
-  const downEl=document.getElementById('calc-down-'+vehicle);
-  const termEl=document.getElementById('calc-term-'+vehicle);
-  const aprEl=document.getElementById('calc-apr-'+vehicle);
-  const resultEl=document.getElementById('calc-result-'+vehicle);
-  if(!priceEl||!resultEl)return;
-  const price=parseFloat(priceEl.value.replace(/[^0-9.]/g,''))||0;
-  const down=parseFloat(downEl.value.replace(/[^0-9.]/g,''))||0;
-  const term=parseInt(termEl.value)||60;
-  const apr=parseFloat(aprEl.value)||0;
-  const principal=price-down;
-  if(principal<=0){resultEl.textContent='$0';return;}
-  if(apr===0){resultEl.textContent='$'+Math.round(principal/term).toLocaleString();return;}
-  const monthlyRate=apr/100/12;
-  const payment=principal*(monthlyRate*Math.pow(1+monthlyRate,term))/(Math.pow(1+monthlyRate,term)-1);
-  resultEl.textContent='$'+Math.round(payment).toLocaleString();
-}
-// Initialize calculator
-setTimeout(()=>calcPayment('bentley'),100);
+setTimeout(()=>document.querySelectorAll('#hero .fade-up').forEach(el=>el.classList.add('visible')),100);
 </script>
-<!-- MODAL: Chevrolet Silverado -->
-  <div class="modal-overlay" id="modal-chevroletsilverado" onclick="closeModal(this)">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal(document.getElementById('modal-chevroletsilverado'))">✕</button>
-      <div class="modal-img-wrap">
-        <img class="modal-img" src="images/silverado.jpg" alt="2017 Chevrolet Silverado LT">
-      </div>
-      <div class="modal-body">
-        <p class="vehicle-make">Chevrolet · 2017</p>
-        <h2 class="modal-title">Silverado LT</h2>
-        <div class="spec-grid">
-          <div class="spec-item"><span class="spec-label" data-lang="en">Mileage</span><span class="spec-label" data-lang="es">Kilometraje</span><span class="spec-value">87,863 mi</span></div>
-          <div class="spec-item"><span class="spec-label" data-lang="en">Price</span><span class="spec-label" data-lang="es">Precio</span><span class="spec-value">$28,500</span></div>
-          <div class="spec-item"><span class="spec-label">VIN</span><span class="spec-value" style="font-size:11px">3GCUKREC6HG256265</span></div>
-          <div class="spec-item"><span class="spec-label">Est. Payment</span><span class="spec-value">Est. $551/mo</span></div>
-        </div>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-          <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call to Inquire →</a>
-          <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar →</a>
-          <a href="#financing" class="btn-secondary" onclick="closeModal(document.getElementById('modal-chevroletsilverado'))" data-lang="en">Apply for Financing</a>
-          <a href="#financing" class="btn-secondary" onclick="closeModal(document.getElementById('modal-chevroletsilverado'))" data-lang="es">Solicitar Financiamiento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: Ram 1500 -->
-  <div class="modal-overlay" id="modal-ram1500" onclick="closeModal(this)">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal(document.getElementById('modal-ram1500'))">✕</button>
-      <div class="modal-img-wrap">
-        <img class="modal-img" src="images/ram1500.jpg" alt="2019 Ram 1500 Rebel, Sport 2TL Pkg, Rebel 2TW Pkg">
-      </div>
-      <div class="modal-body">
-        <p class="vehicle-make">Ram · 2019</p>
-        <h2 class="modal-title">1500 Rebel, Sport 2TL Pkg, Rebel 2TW Pkg</h2>
-        <div class="spec-grid">
-          <div class="spec-item"><span class="spec-label" data-lang="en">Mileage</span><span class="spec-label" data-lang="es">Kilometraje</span><span class="spec-value">131,854 mi</span></div>
-          <div class="spec-item"><span class="spec-label" data-lang="en">Price</span><span class="spec-label" data-lang="es">Precio</span><span class="spec-value">$27,500</span></div>
-          <div class="spec-item"><span class="spec-label">VIN</span><span class="spec-value" style="font-size:11px">1C6SRFLTXKN722063</span></div>
-          <div class="spec-item"><span class="spec-label">Est. Payment</span><span class="spec-value">Est. $532/mo</span></div>
-        </div>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-          <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call to Inquire →</a>
-          <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar →</a>
-          <a href="#financing" class="btn-secondary" onclick="closeModal(document.getElementById('modal-ram1500'))" data-lang="en">Apply for Financing</a>
-          <a href="#financing" class="btn-secondary" onclick="closeModal(document.getElementById('modal-ram1500'))" data-lang="es">Solicitar Financiamiento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: Honda Civic -->
-  <div class="modal-overlay" id="modal-hondacivic" onclick="closeModal(this)">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal(document.getElementById('modal-hondacivic'))">✕</button>
-      <div class="modal-img-wrap">
-        <img class="modal-img" src="images/civic.jpg" alt="2017 Honda Civic EX-L">
-      </div>
-      <div class="modal-body">
-        <p class="vehicle-make">Honda · 2017</p>
-        <h2 class="modal-title">Civic EX-L</h2>
-        <div class="spec-grid">
-          <div class="spec-item"><span class="spec-label" data-lang="en">Mileage</span><span class="spec-label" data-lang="es">Kilometraje</span><span class="spec-value">151,380 mi</span></div>
-          <div class="spec-item"><span class="spec-label" data-lang="en">Price</span><span class="spec-label" data-lang="es">Precio</span><span class="spec-value">$14,500</span></div>
-          <div class="spec-item"><span class="spec-label">VIN</span><span class="spec-value" style="font-size:11px">SHHFK7H77HU400745</span></div>
-          <div class="spec-item"><span class="spec-label">Est. Payment</span><span class="spec-value">Est. $280/mo</span></div>
-        </div>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-          <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call to Inquire →</a>
-          <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar →</a>
-          <a href="#financing" class="btn-secondary" onclick="closeModal(document.getElementById('modal-hondacivic'))" data-lang="en">Apply for Financing</a>
-          <a href="#financing" class="btn-secondary" onclick="closeModal(document.getElementById('modal-hondacivic'))" data-lang="es">Solicitar Financiamiento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL: Hyundai Sonata -->
-  <div class="modal-overlay" id="modal-hyundaisonata" onclick="closeModal(this)">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal(document.getElementById('modal-hyundaisonata'))">✕</button>
-      <div class="modal-img-wrap">
-        <img class="modal-img" src="images/sonata.jpg" alt="2021 Hyundai Sonata SEL">
-      </div>
-      <div class="modal-body">
-        <p class="vehicle-make">Hyundai · 2021</p>
-        <h2 class="modal-title">Sonata SEL</h2>
-        <div class="spec-grid">
-          <div class="spec-item"><span class="spec-label" data-lang="en">Mileage</span><span class="spec-label" data-lang="es">Kilometraje</span><span class="spec-value">112,900 mi</span></div>
-          <div class="spec-item"><span class="spec-label" data-lang="en">Price</span><span class="spec-label" data-lang="es">Precio</span><span class="spec-value">$13,050</span></div>
-          <div class="spec-item"><span class="spec-label">VIN</span><span class="spec-value" style="font-size:11px">KMHL34JJ4MA027409</span></div>
-          <div class="spec-item"><span class="spec-label">Est. Payment</span><span class="spec-value">Est. $252/mo</span></div>
-        </div>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-          <a href="tel:+17869279128" class="btn-primary" data-lang="en">Call to Inquire →</a>
-          <a href="tel:+17869279128" class="btn-primary" data-lang="es">Llamar →</a>
-          <a href="#financing" class="btn-secondary" onclick="closeModal(document.getElementById('modal-hyundaisonata'))" data-lang="en">Apply for Financing</a>
-          <a href="#financing" class="btn-secondary" onclick="closeModal(document.getElementById('modal-hyundaisonata'))" data-lang="es">Solicitar Financiamiento</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
