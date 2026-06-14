@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://openroad-autos.com/sitemap.xml

@@ -1,9 +1,306 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>OpenRoad Auto Group</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | OpenRoad Auto Group</title>
+<meta name="description" content="OpenRoad Auto Group — page not found.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://openroad-autos.com/">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ───────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --clr-black:#0a0a0a;
+  --clr-dark:#111217;
+  --clr-dark-2:#1a1c22;
+  --clr-dark-3:#22252e;
+  --clr-border:#2c2f3a;
+  --clr-gold:#c9a84c;
+  --clr-gold-light:#e0bf72;
+  --clr-gold-dim:rgba(201,168,76,.15);
+  --clr-white:#ffffff;
+  --clr-off-white:#f5f5f3;
+  --clr-muted:#8a8fa3;
+  --clr-text:#d0d3de;
+  --font-head:'Playfair Display',Georgia,serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --radius:6px;
+  --radius-lg:12px;
+  --shadow-card:0 4px 24px rgba(0,0,0,.45);
+  --trans:250ms ease;
+  --container:1280px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);background:var(--clr-dark);color:var(--clr-text);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,h5{font-family:var(--font-head);color:var(--clr-white);line-height:1.2;font-weight:700}
+h1{font-size:clamp(2.2rem,5vw,4rem)}
+h2{font-size:clamp(1.6rem,3vw,2.6rem)}
+h3{font-size:clamp(1.2rem,2vw,1.6rem)}
+p{margin-bottom:1rem}
 
+/* ── Layout ─────────────────────────────────────────────────── */
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+section{padding:80px 0}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:var(--radius);font-family:var(--font-body);font-size:.95rem;font-weight:600;letter-spacing:.02em;cursor:pointer;border:none;transition:var(--trans);text-align:center}
+.btn-primary{background:var(--clr-gold);color:var(--clr-black)}
+.btn-primary:hover{background:var(--clr-gold-light);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--clr-gold);border:1.5px solid var(--clr-gold)}
+.btn-outline:hover{background:var(--clr-gold-dim)}
+.btn-ghost{background:rgba(255,255,255,.08);color:var(--clr-white);border:1px solid var(--clr-border)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.btn-dark{background:var(--clr-dark-3);color:var(--clr-white);border:1px solid var(--clr-border)}
+.btn-lg{padding:16px 36px;font-size:1.05rem}
+
+/* ── Header / Nav ───────────────────────────────────────────── */
+#site-header{position:fixed;top:0;left:0;right:0;z-index:999;padding:18px 0;transition:background var(--trans),padding var(--trans),box-shadow var(--trans)}
+#site-header.scrolled{background:rgba(10,10,10,.96);backdrop-filter:blur(12px);padding:12px 0;box-shadow:0 2px 20px rgba(0,0,0,.5)}
+.nav-inner{display:flex;align-items:center;gap:32px}
+.logo img{height:48px;transition:transform var(--trans)}
+.logo:hover img{transform:scale(1.03)}
+.main-nav{display:flex;gap:28px;flex:1;justify-content:center}
+.main-nav a{color:var(--clr-muted);font-size:.9rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color var(--trans);position:relative;padding-bottom:4px}
+.main-nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--clr-gold);transform:scaleX(0);transition:transform var(--trans)}
+.main-nav a:hover{color:var(--clr-white)}
+.main-nav a:hover::after{transform:scaleX(1)}
+.nav-cta{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--clr-white);transition:var(--trans)}
+
+/* ── Section Labels ─────────────────────────────────────────── */
+.section-label{display:inline-block;text-transform:uppercase;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:var(--clr-gold);margin-bottom:12px}
+.section-header{text-align:center;max-width:640px;margin:0 auto 56px}
+.section-header p{color:var(--clr-muted);font-size:1.05rem;margin-top:12px}
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('/assets/hero-miami.jpg') center/cover no-repeat;filter:brightness(.28)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.8) 0%,rgba(10,10,10,.2) 100%)}
+.hero-content{position:relative;z-index:2;max-width:700px;padding-top:100px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--clr-gold-dim);border:1px solid var(--clr-gold);border-radius:99px;padding:6px 16px;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--clr-gold);margin-bottom:28px}
+.hero h1{margin-bottom:20px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero h1 em{font-style:normal;color:var(--clr-gold)}
+.hero p{font-size:1.15rem;color:rgba(255,255,255,.7);max-width:520px;margin-bottom:36px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:40px;margin-top:60px;padding-top:40px;border-top:1px solid var(--clr-border)}
+.hero-stats .stat-num{font-family:var(--font-head);font-size:2rem;color:var(--clr-white);font-weight:700}
+.hero-stats .stat-label{font-size:.8rem;color:var(--clr-muted);text-transform:uppercase;letter-spacing:.06em}
+
+/* ── Trust Bar ──────────────────────────────────────────────── */
+.trust-bar{background:var(--clr-dark-2);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border);padding:24px 0}
+.trust-bar-inner{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;align-items:center}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:500;color:var(--clr-muted)}
+.trust-item svg{color:var(--clr-gold)}
+
+/* ── Cards ──────────────────────────────────────────────────── */
+.card{background:var(--clr-dark-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);overflow:hidden;transition:transform var(--trans),box-shadow var(--trans)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card)}
+.card-img{width:100%;height:220px;object-fit:cover;background:var(--clr-dark-3)}
+.card-body{padding:20px}
+.card-badge{display:inline-block;background:var(--clr-gold-dim);color:var(--clr-gold);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:4px;margin-bottom:12px}
+.card-title{font-size:1.15rem;margin-bottom:6px;color:var(--clr-white)}
+.card-meta{display:flex;gap:16px;font-size:.82rem;color:var(--clr-muted);margin-bottom:14px}
+.card-price{font-family:var(--font-head);font-size:1.5rem;color:var(--clr-gold);font-weight:700;margin-bottom:16px}
+.card-price span{font-size:.85rem;font-family:var(--font-body);color:var(--clr-muted);font-weight:400;margin-left:4px}
+.card-actions{display:flex;gap:10px}
+.card-actions .btn{flex:1;justify-content:center;padding:10px 16px;font-size:.88rem}
+
+/* ── Grid layouts ───────────────────────────────────────────── */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+
+/* ── Features ───────────────────────────────────────────────── */
+.feature-icon{width:52px;height:52px;border-radius:var(--radius);background:var(--clr-gold-dim);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--clr-gold)}
+.feature-card{background:var(--clr-dark-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:28px;transition:border-color var(--trans)}
+.feature-card:hover{border-color:var(--clr-gold)}
+.feature-card h3{font-size:1.1rem;margin-bottom:8px}
+.feature-card p{font-size:.9rem;color:var(--clr-muted);margin:0}
+
+/* ── CTA Section ────────────────────────────────────────────── */
+.cta-section{background:linear-gradient(135deg,var(--clr-dark-2) 0%,var(--clr-dark-3) 100%);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border);text-align:center}
+.cta-section h2{margin-bottom:16px}
+.cta-section p{color:var(--clr-muted);max-width:540px;margin:0 auto 36px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ── Page Hero (inner pages) ────────────────────────────────── */
+.page-hero{padding:140px 0 60px;background:linear-gradient(180deg,var(--clr-dark) 0%,var(--clr-dark-2) 100%);border-bottom:1px solid var(--clr-border)}
+.page-hero h1{margin-bottom:12px}
+.page-hero p{color:var(--clr-muted);font-size:1.05rem;max-width:540px}
+
+/* ── Forms ──────────────────────────────────────────────────── */
+.form-group{margin-bottom:20px}
+.form-label{display:block;font-size:.85rem;font-weight:600;color:var(--clr-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.form-input,.form-select,.form-textarea{width:100%;background:var(--clr-dark-3);border:1px solid var(--clr-border);border-radius:var(--radius);padding:12px 16px;color:var(--clr-white);font-family:var(--font-body);font-size:.95rem;transition:border-color var(--trans);outline:none}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--clr-gold)}
+.form-select option{background:var(--clr-dark-3)}
+.form-textarea{resize:vertical;min-height:120px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.site-footer{background:var(--clr-black);border-top:1px solid var(--clr-border);padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:48px}
+.footer-brand p{font-size:.88rem;color:var(--clr-muted);margin:14px 0 20px;line-height:1.7}
+.footer-links h4,.footer-contact h4,.footer-cta h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--clr-gold);margin-bottom:16px;font-family:var(--font-body)}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:.88rem;color:var(--clr-muted);transition:color var(--trans)}
+.footer-links a:hover{color:var(--clr-white)}
+.footer-contact p{font-size:.88rem;color:var(--clr-muted);margin-bottom:8px}
+.footer-contact a{color:var(--clr-gold)}
+.footer-cta p{font-size:.88rem;color:var(--clr-muted);margin-bottom:18px}
+.footer-cta .btn{width:100%;justify-content:center;margin-bottom:10px}
+.social-links{display:flex;gap:12px}
+.social-links a{width:38px;height:38px;border-radius:50%;background:var(--clr-dark-2);border:1px solid var(--clr-border);display:flex;align-items:center;justify-content:center;color:var(--clr-muted);transition:all var(--trans)}
+.social-links a:hover{background:var(--clr-gold-dim);border-color:var(--clr-gold);color:var(--clr-gold)}
+.footer-bottom{border-top:1px solid var(--clr-border);padding:20px 0;text-align:center}
+.footer-bottom p{font-size:.8rem;color:var(--clr-muted);margin:0}
+.footer-bottom a{color:var(--clr-gold)}
+
+/* ── Inventory filters ──────────────────────────────────────── */
+.filter-bar{background:var(--clr-dark-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:24px;margin-bottom:36px;display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
+.filter-bar .form-group{flex:1;min-width:180px;margin:0}
+
+/* ── Testimonials ───────────────────────────────────────────── */
+.testimonial{background:var(--clr-dark-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:28px}
+.testimonial-stars{color:var(--clr-gold);font-size:1rem;margin-bottom:12px}
+.testimonial p{font-size:.95rem;color:var(--clr-muted);font-style:italic;margin-bottom:16px}
+.testimonial-author{font-weight:700;font-size:.88rem;color:var(--clr-white)}
+
+/* ── Utility ─────────────────────────────────────────────────── */
+.text-gold{color:var(--clr-gold)}
+.text-muted{color:var(--clr-muted)}
+.text-center{text-align:center}
+.divider{width:60px;height:2px;background:var(--clr-gold);margin:20px 0}
+.highlight-box{background:var(--clr-gold-dim);border:1px solid var(--clr-gold);border-radius:var(--radius);padding:20px 24px}
+.alert-info{background:rgba(201,168,76,.1);border-left:3px solid var(--clr-gold);padding:16px 20px;border-radius:0 var(--radius) var(--radius) 0;font-size:.9rem}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media(max-width:1024px){
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .grid-2{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .main-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--clr-black);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:998}
+  .main-nav.open{display:flex}
+  .main-nav a{font-size:1.4rem}
+  .nav-toggle{display:flex;z-index:999}
+  .nav-cta .btn-ghost{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  section{padding:56px 0}
+  .hero-stats{gap:24px}
+  .trust-bar-inner{gap:24px}
+  .filter-bar{flex-direction:column}
+}
+</style>
 </head>
-<body>Redirecting...</body>
+<body>
+
+<header id="site-header">
+  <div class="container nav-inner">
+    <a href="/" class="logo" aria-label="OpenRoad Auto Group">
+      <img src="/assets/logo.png" alt="OpenRoad Auto Group" height="48">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/inventory/">Inventory</a>
+      <a href="/financing/">Financing</a>
+      <a href="/trade-in/">Trade-In</a>
+      <a href="/car-finder/">Car Finder</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:7869279128" class="btn btn-ghost" data-vapi-phone="(786) 927-9128">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.03 2.2 2 2 0 012 .03h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.25-1.25a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (786) 927-9128
+      </a>
+      <a href="/inventory/" class="btn btn-primary" data-vapi-action="view-inventory">View Inventory</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+
+<main style="min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px">
+  <div>
+    <div style="font-size:6rem;font-family:var(--font-head);color:var(--clr-gold);font-weight:900;line-height:1">404</div>
+    <h1 style="margin:16px 0 12px">Page Not Found</h1>
+    <p class="text-muted" style="max-width:400px;margin:0 auto 32px">Looks like you took a wrong turn. Head back to our inventory or home page.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="/" class="btn btn-primary btn-lg">Go Home</a>
+      <a href="/inventory/" class="btn btn-dark btn-lg">Browse Inventory</a>
+    </div>
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="/assets/logo.png" alt="OpenRoad Auto Group" height="44">
+      <p>Premium pre-owned vehicles in Miami's Opa-Locka area. Quality you can trust, prices you'll love.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="/">Home</a>
+      <a href="/inventory/">Inventory</a>
+      <a href="/financing/">Financing</a>
+      <a href="/trade-in/">Trade-In</a>
+      <a href="/car-finder/">Car Finder</a>
+      <a href="/about/">About Us</a>
+      <a href="/contact/">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><strong>Phone:</strong> <a href="tel:7869279128" data-vapi-phone="(786) 927-9128">(786) 927-9128</a></p>
+      <p><strong>Address:</strong><br>Opa-Locka, Florida 33054</p>
+      <p><strong>Hours:</strong><br>Mon–Sat: 9AM – 7PM<br>Sun: 11AM – 5PM</p>
+    </div>
+    <div class="footer-cta">
+      <h4>Ready to Drive?</h4>
+      <p>Browse our curated inventory of premium pre-owned vehicles.</p>
+      <a href="/inventory/" class="btn btn-primary" data-vapi-action="view-inventory">Shop Inventory</a>
+      <a href="https://app.dealercenter.net/apply?dealer=openroad" class="btn btn-outline" target="_blank" rel="noopener" data-vapi-action="apply-financing">Apply for Financing</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2025 OpenRoad Auto Group. All rights reserved. | <a href="/privacy/">Privacy Policy</a></p>
+      <p>All vehicles are subject to prior sale. Prices exclude taxes, title, and registration fees.</p>
+    </div>
+  </div>
+</footer>
+<script>
+// Mobile nav toggle
+document.querySelector('.nav-toggle')?.addEventListener('click', function(){
+  const expanded = this.getAttribute('aria-expanded') === 'true';
+  this.setAttribute('aria-expanded', !expanded);
+  document.querySelector('.main-nav').classList.toggle('open');
+});
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header')?.classList.toggle('scrolled', window.scrollY > 40);
+});
+</script>
+
+</body>
 </html>
