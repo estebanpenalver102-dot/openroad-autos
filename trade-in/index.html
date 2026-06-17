@@ -1,380 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trade-In | OpenRoad Auto Group</title>
-<meta name="description" content="Get a fair trade-in quote for your vehicle at OpenRoad Auto Group in Opa-Locka, FL.">
-<meta name="theme-color" content="#0a0a0a">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trade-In — Get Top Dollar — OpenRoad Auto Group | Miami FL</title>
+<meta name="description" content="Get a fair market trade-in quote at OpenRoad Auto Group in Opa-Locka FL. Same-day appraisals.">
+<meta property="og:title" content="Trade-In — Get Top Dollar — OpenRoad Auto Group">
+<meta property="og:description" content="Get a fair market trade-in quote at OpenRoad Auto Group in Opa-Locka FL. Same-day appraisals.">
+<meta property="og:image" content="https://openroad-autos.com/assets/og.jpg">
+<meta name="theme-color" content="#07080a">
 <link rel="canonical" href="https://openroad-autos.com/trade-in/">
-<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* ── Reset & Base ───────────────────────────────────────────── */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --clr-black:#0a0a0a;
-  --clr-dark:#111217;
-  --clr-dark-2:#1a1c22;
-  --clr-dark-3:#22252e;
-  --clr-border:#2c2f3a;
-  --clr-gold:#c9a84c;
-  --clr-gold-light:#e0bf72;
-  --clr-gold-dim:rgba(201,168,76,.15);
-  --clr-white:#ffffff;
-  --clr-off-white:#f5f5f3;
-  --clr-muted:#8a8fa3;
-  --clr-text:#d0d3de;
-  --font-head:'Playfair Display',Georgia,serif;
-  --font-body:'Inter',system-ui,sans-serif;
-  --radius:6px;
-  --radius-lg:12px;
-  --shadow-card:0 4px 24px rgba(0,0,0,.45);
-  --trans:250ms ease;
-  --container:1280px;
-}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--font-body);background:var(--clr-dark);color:var(--clr-text);line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-h1,h2,h3,h4,h5{font-family:var(--font-head);color:var(--clr-white);line-height:1.2;font-weight:700}
-h1{font-size:clamp(2.2rem,5vw,4rem)}
-h2{font-size:clamp(1.6rem,3vw,2.6rem)}
-h3{font-size:clamp(1.2rem,2vw,1.6rem)}
-p{margin-bottom:1rem}
-
-/* ── Layout ─────────────────────────────────────────────────── */
-.container{max-width:var(--container);margin:0 auto;padding:0 24px}
-section{padding:80px 0}
-
-/* ── Buttons ─────────────────────────────────────────────────── */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:var(--radius);font-family:var(--font-body);font-size:.95rem;font-weight:600;letter-spacing:.02em;cursor:pointer;border:none;transition:var(--trans);text-align:center}
-.btn-primary{background:var(--clr-gold);color:var(--clr-black)}
-.btn-primary:hover{background:var(--clr-gold-light);transform:translateY(-1px)}
-.btn-outline{background:transparent;color:var(--clr-gold);border:1.5px solid var(--clr-gold)}
-.btn-outline:hover{background:var(--clr-gold-dim)}
-.btn-ghost{background:rgba(255,255,255,.08);color:var(--clr-white);border:1px solid var(--clr-border)}
-.btn-ghost:hover{background:rgba(255,255,255,.14)}
-.btn-dark{background:var(--clr-dark-3);color:var(--clr-white);border:1px solid var(--clr-border)}
-.btn-lg{padding:16px 36px;font-size:1.05rem}
-
-/* ── Header / Nav ───────────────────────────────────────────── */
-#site-header{position:fixed;top:0;left:0;right:0;z-index:999;padding:18px 0;transition:background var(--trans),padding var(--trans),box-shadow var(--trans)}
-#site-header.scrolled{background:rgba(10,10,10,.96);backdrop-filter:blur(12px);padding:12px 0;box-shadow:0 2px 20px rgba(0,0,0,.5)}
-.nav-inner{display:flex;align-items:center;gap:32px}
-.logo img{height:48px;transition:transform var(--trans)}
-.logo:hover img{transform:scale(1.03)}
-.main-nav{display:flex;gap:28px;flex:1;justify-content:center}
-.main-nav a{color:var(--clr-muted);font-size:.9rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color var(--trans);position:relative;padding-bottom:4px}
-.main-nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--clr-gold);transform:scaleX(0);transition:transform var(--trans)}
-.main-nav a:hover{color:var(--clr-white)}
-.main-nav a:hover::after{transform:scaleX(1)}
-.nav-cta{display:flex;gap:12px;align-items:center;flex-shrink:0}
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--clr-white);transition:var(--trans)}
-
-/* ── Section Labels ─────────────────────────────────────────── */
-.section-label{display:inline-block;text-transform:uppercase;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:var(--clr-gold);margin-bottom:12px}
-.section-header{text-align:center;max-width:640px;margin:0 auto 56px}
-.section-header p{color:var(--clr-muted);font-size:1.05rem;margin-top:12px}
-
-/* ── Hero ───────────────────────────────────────────────────── */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('/assets/hero-miami.jpg') center/cover no-repeat;filter:brightness(.28)}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.8) 0%,rgba(10,10,10,.2) 100%)}
-.hero-content{position:relative;z-index:2;max-width:700px;padding-top:100px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--clr-gold-dim);border:1px solid var(--clr-gold);border-radius:99px;padding:6px 16px;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--clr-gold);margin-bottom:28px}
-.hero h1{margin-bottom:20px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
-.hero h1 em{font-style:normal;color:var(--clr-gold)}
-.hero p{font-size:1.15rem;color:rgba(255,255,255,.7);max-width:520px;margin-bottom:36px}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
-.hero-stats{display:flex;gap:40px;margin-top:60px;padding-top:40px;border-top:1px solid var(--clr-border)}
-.hero-stats .stat-num{font-family:var(--font-head);font-size:2rem;color:var(--clr-white);font-weight:700}
-.hero-stats .stat-label{font-size:.8rem;color:var(--clr-muted);text-transform:uppercase;letter-spacing:.06em}
-
-/* ── Trust Bar ──────────────────────────────────────────────── */
-.trust-bar{background:var(--clr-dark-2);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border);padding:24px 0}
-.trust-bar-inner{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;align-items:center}
-.trust-item{display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:500;color:var(--clr-muted)}
-.trust-item svg{color:var(--clr-gold)}
-
-/* ── Cards ──────────────────────────────────────────────────── */
-.card{background:var(--clr-dark-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);overflow:hidden;transition:transform var(--trans),box-shadow var(--trans)}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card)}
-.card-img{width:100%;height:220px;object-fit:cover;background:var(--clr-dark-3)}
-.card-body{padding:20px}
-.card-badge{display:inline-block;background:var(--clr-gold-dim);color:var(--clr-gold);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:4px;margin-bottom:12px}
-.card-title{font-size:1.15rem;margin-bottom:6px;color:var(--clr-white)}
-.card-meta{display:flex;gap:16px;font-size:.82rem;color:var(--clr-muted);margin-bottom:14px}
-.card-price{font-family:var(--font-head);font-size:1.5rem;color:var(--clr-gold);font-weight:700;margin-bottom:16px}
-.card-price span{font-size:.85rem;font-family:var(--font-body);color:var(--clr-muted);font-weight:400;margin-left:4px}
-.card-actions{display:flex;gap:10px}
-.card-actions .btn{flex:1;justify-content:center;padding:10px 16px;font-size:.88rem}
-
-/* ── Grid layouts ───────────────────────────────────────────── */
-.grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px}
-.grid-4{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-
-/* ── Features ───────────────────────────────────────────────── */
-.feature-icon{width:52px;height:52px;border-radius:var(--radius);background:var(--clr-gold-dim);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--clr-gold)}
-.feature-card{background:var(--clr-dark-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:28px;transition:border-color var(--trans)}
-.feature-card:hover{border-color:var(--clr-gold)}
-.feature-card h3{font-size:1.1rem;margin-bottom:8px}
-.feature-card p{font-size:.9rem;color:var(--clr-muted);margin:0}
-
-/* ── CTA Section ────────────────────────────────────────────── */
-.cta-section{background:linear-gradient(135deg,var(--clr-dark-2) 0%,var(--clr-dark-3) 100%);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border);text-align:center}
-.cta-section h2{margin-bottom:16px}
-.cta-section p{color:var(--clr-muted);max-width:540px;margin:0 auto 36px}
-.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-
-/* ── Page Hero (inner pages) ────────────────────────────────── */
-.page-hero{padding:140px 0 60px;background:linear-gradient(180deg,var(--clr-dark) 0%,var(--clr-dark-2) 100%);border-bottom:1px solid var(--clr-border)}
-.page-hero h1{margin-bottom:12px}
-.page-hero p{color:var(--clr-muted);font-size:1.05rem;max-width:540px}
-
-/* ── Forms ──────────────────────────────────────────────────── */
-.form-group{margin-bottom:20px}
-.form-label{display:block;font-size:.85rem;font-weight:600;color:var(--clr-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-.form-input,.form-select,.form-textarea{width:100%;background:var(--clr-dark-3);border:1px solid var(--clr-border);border-radius:var(--radius);padding:12px 16px;color:var(--clr-white);font-family:var(--font-body);font-size:.95rem;transition:border-color var(--trans);outline:none}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--clr-gold)}
-.form-select option{background:var(--clr-dark-3)}
-.form-textarea{resize:vertical;min-height:120px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-
-/* ── Footer ─────────────────────────────────────────────────── */
-.site-footer{background:var(--clr-black);border-top:1px solid var(--clr-border);padding:64px 0 0}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:40px;margin-bottom:48px}
-.footer-brand p{font-size:.88rem;color:var(--clr-muted);margin:14px 0 20px;line-height:1.7}
-.footer-links h4,.footer-contact h4,.footer-cta h4{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--clr-gold);margin-bottom:16px;font-family:var(--font-body)}
-.footer-links{display:flex;flex-direction:column;gap:10px}
-.footer-links a{font-size:.88rem;color:var(--clr-muted);transition:color var(--trans)}
-.footer-links a:hover{color:var(--clr-white)}
-.footer-contact p{font-size:.88rem;color:var(--clr-muted);margin-bottom:8px}
-.footer-contact a{color:var(--clr-gold)}
-.footer-cta p{font-size:.88rem;color:var(--clr-muted);margin-bottom:18px}
-.footer-cta .btn{width:100%;justify-content:center;margin-bottom:10px}
-.social-links{display:flex;gap:12px}
-.social-links a{width:38px;height:38px;border-radius:50%;background:var(--clr-dark-2);border:1px solid var(--clr-border);display:flex;align-items:center;justify-content:center;color:var(--clr-muted);transition:all var(--trans)}
-.social-links a:hover{background:var(--clr-gold-dim);border-color:var(--clr-gold);color:var(--clr-gold)}
-.footer-bottom{border-top:1px solid var(--clr-border);padding:20px 0;text-align:center}
-.footer-bottom p{font-size:.8rem;color:var(--clr-muted);margin:0}
-.footer-bottom a{color:var(--clr-gold)}
-
-/* ── Inventory filters ──────────────────────────────────────── */
-.filter-bar{background:var(--clr-dark-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:24px;margin-bottom:36px;display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}
-.filter-bar .form-group{flex:1;min-width:180px;margin:0}
-
-/* ── Testimonials ───────────────────────────────────────────── */
-.testimonial{background:var(--clr-dark-2);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:28px}
-.testimonial-stars{color:var(--clr-gold);font-size:1rem;margin-bottom:12px}
-.testimonial p{font-size:.95rem;color:var(--clr-muted);font-style:italic;margin-bottom:16px}
-.testimonial-author{font-weight:700;font-size:.88rem;color:var(--clr-white)}
-
-/* ── Utility ─────────────────────────────────────────────────── */
-.text-gold{color:var(--clr-gold)}
-.text-muted{color:var(--clr-muted)}
-.text-center{text-align:center}
-.divider{width:60px;height:2px;background:var(--clr-gold);margin:20px 0}
-.highlight-box{background:var(--clr-gold-dim);border:1px solid var(--clr-gold);border-radius:var(--radius);padding:20px 24px}
-.alert-info{background:rgba(201,168,76,.1);border-left:3px solid var(--clr-gold);padding:16px 20px;border-radius:0 var(--radius) var(--radius) 0;font-size:.9rem}
-
-/* ── Responsive ─────────────────────────────────────────────── */
-@media(max-width:1024px){
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .grid-2{grid-template-columns:1fr}
-}
+<link rel="icon" href="/assets/favicon.ico">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bk:#07080a;--d1:#0d0f14;--d2:#131620;--d3:#191c24;--d4:#1f2230;--br:#252836;--br2:#2e3245;--gd:#c9a84c;--gd2:#e0c070;--gdbg:rgba(201,168,76,.1);--gdbr:rgba(201,168,76,.28);--wh:#fff;--tx:#bfc4d6;--mt:#727899;--r:8px;--rl:14px;--rxl:20px;--t:220ms ease;--mx:1300px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bk);color:var(--tx);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{color:var(--wh);line-height:1.15;font-weight:700;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,4.5vw,3.6rem)}h2{font-size:clamp(1.5rem,3vw,2.4rem)}h3{font-size:clamp(1rem,1.8vw,1.3rem)}p{margin-bottom:.85rem}
+.w{max-width:var(--mx);margin:0 auto;padding:0 28px}.sec{padding:88px 0}.sec-sm{padding:56px 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gauto{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:12px 24px;border-radius:var(--r);font-size:.88rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);white-space:nowrap}
+.bp{background:var(--gd);color:#09090a}.bp:hover{background:var(--gd2);transform:translateY(-1px)}
+.bo{background:transparent;color:var(--gd);border:1.5px solid var(--gdbr)}.bo:hover{background:var(--gdbg);border-color:var(--gd)}
+.bg{background:rgba(255,255,255,.06);color:var(--wh);border:1px solid var(--br)}.bg:hover{background:rgba(255,255,255,.1)}
+.bsm{padding:9px 18px;font-size:.8rem}.blg{padding:15px 34px;font-size:.98rem}.bfw{width:100%;justify-content:center}
+#hdr{position:fixed;top:0;left:0;right:0;z-index:900;padding:15px 0;transition:all var(--t)}
+#hdr.sc{background:rgba(7,8,10,.96);backdrop-filter:blur(18px);padding:9px 0;border-bottom:1px solid var(--br)}
+.hi{display:flex;align-items:center;gap:20px}
+.logo{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.logo img{height:40px}
+.lt{display:flex;flex-direction:column;line-height:1.05}
+.lt strong{font-size:.9rem;color:var(--wh);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.lt span{font-size:.6rem;color:var(--gd);text-transform:uppercase;letter-spacing:.14em;font-weight:600}
+.mnav{display:flex;gap:4px;flex:1;justify-content:center}
+.mnav a{padding:7px 13px;border-radius:var(--r);font-size:.82rem;font-weight:500;color:var(--mt);transition:all var(--t)}
+.mnav a:hover,.mnav a.act{color:var(--wh);background:rgba(255,255,255,.06)}
+.hcta{display:flex;gap:9px;align-items:center;flex-shrink:0}
+.hph{font-size:.8rem;font-weight:600;color:var(--gd);display:flex;align-items:center;gap:5px}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:901}
+.ham span{display:block;width:21px;height:1.5px;background:var(--wh)}
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;overflow:hidden}
+.hbg{position:absolute;inset:0}.hbg img{width:100%;height:100%;object-fit:cover;filter:brightness(.2) saturate(.7)}
+.hov{position:absolute;inset:0;background:linear-gradient(110deg,rgba(7,8,10,.9) 0%,rgba(7,8,10,.25) 65%,transparent 100%)}
+.hc{position:relative;z-index:2;max-width:660px;padding-top:90px}
+.ey{display:inline-flex;align-items:center;gap:7px;background:var(--gdbg);border:1px solid var(--gdbr);padding:5px 13px;border-radius:99px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gd);margin-bottom:22px}
+.ey i{width:6px;height:6px;border-radius:50%;background:var(--gd);flex-shrink:0;animation:pd 1.8s ease-in-out infinite}
+@keyframes pd{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{margin-bottom:16px}.hero h1 em{font-style:normal;color:var(--gd)}
+.hsub{font-size:1.05rem;color:rgba(255,255,255,.58);max-width:490px;margin-bottom:32px}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap}
+.hstats{display:flex;gap:0;margin-top:60px;border-top:1px solid var(--br);padding-top:32px}
+.hs{padding-right:36px;border-right:1px solid var(--br);margin-right:36px}
+.hs:last-child{border:none;margin:0;padding:0}
+.hsn{font-size:2rem;font-weight:800;color:var(--wh);line-height:1}
+.hsl{font-size:.68rem;color:var(--mt);text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
+.trst{background:var(--d2);border-bottom:1px solid var(--br);padding:16px 0}
+.trin{display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:7px;font-size:.8rem;font-weight:500;color:var(--mt)}
+.ti svg{color:var(--gd);flex-shrink:0}
+.lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--gd);display:block;margin-bottom:9px}
+.sh{max-width:560px}.sh p{color:var(--mt);margin-top:10px;font-size:.97rem}.sh.c{margin:0 auto;text-align:center}
+.vc{background:var(--d2);border:1px solid var(--br);border-radius:var(--rxl);overflow:hidden;transition:all var(--t);display:flex;flex-direction:column}
+.vc:hover{border-color:var(--br2);transform:translateY(-3px);box-shadow:0 14px 44px rgba(0,0,0,.55)}
+.vci{position:relative;height:210px;overflow:hidden;background:var(--d3)}
+.vci img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.vc:hover .vci img{transform:scale(1.05)}
+.vcni{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--mt);opacity:.35}
+.vcb2{position:absolute;top:11px;left:11px;display:flex;gap:5px;flex-wrap:wrap}
+.bdg{display:inline-flex;align-items:center;padding:3px 9px;border-radius:5px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.bg2{background:rgba(201,168,76,.15);color:var(--gd);border:1px solid var(--gdbr)}
+.bn{background:rgba(34,197,94,.12);color:#4ade80;border:1px solid rgba(34,197,94,.28)}
+.bs{background:rgba(239,68,68,.12);color:#f87171;border:1px solid rgba(239,68,68,.28)}
+.vcbd{padding:20px;flex:1;display:flex;flex-direction:column}
+.vcyr{font-size:.72rem;color:var(--gd);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+.vct{font-size:1.05rem;color:var(--wh);font-weight:700;margin-bottom:9px;line-height:1.2}
+.vcsp{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:13px}
+.sp{background:var(--d3);border:1px solid var(--br);border-radius:5px;padding:3px 9px;font-size:.7rem;color:var(--mt);white-space:nowrap}
+.vcp{font-size:1.45rem;font-weight:800;color:var(--gd);margin-bottom:16px;margin-top:auto}
+.vcpn{font-size:.75rem;color:var(--mt);font-weight:400;margin-left:6px}
+.vca{display:grid;grid-template-columns:1fr auto;gap:7px}
+.dw{padding-top:90px;padding-bottom:80px}
+.gmain{position:relative;border-radius:var(--rxl);overflow:hidden;background:var(--d3);aspect-ratio:16/9;max-height:500px}
+.gmain img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity .35s ease}
+.gmain img.act{opacity:1;position:relative}
+.gno{width:100%;height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--mt);opacity:.4}
+.gctr{position:absolute;bottom:13px;right:13px;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);color:var(--wh);font-size:.74rem;padding:4px 11px;border-radius:99px;z-index:2}
+.gnav{position:absolute;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;width:100%;padding:0 12px;z-index:2;pointer-events:none}
+.gbtn{pointer-events:all;width:38px;height:38px;border-radius:50%;background:rgba(7,8,10,.75);backdrop-filter:blur(8px);border:1px solid var(--br);display:flex;align-items:center;justify-content:center;color:var(--wh);cursor:pointer;transition:all var(--t)}
+.gbtn:hover{background:var(--gdbg);border-color:var(--gd);color:var(--gd)}
+.gthumbs{display:flex;gap:9px;margin-top:11px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin;scrollbar-color:var(--br) transparent}
+.gthumb{width:94px;height:64px;border-radius:var(--r);overflow:hidden;flex-shrink:0;cursor:pointer;border:2px solid transparent;transition:all var(--t);opacity:.6}
+.gthumb.act,.gthumb:hover{border-color:var(--gd);opacity:1}
+.gthumb img{width:100%;height:100%;object-fit:cover}
+.stkcard{position:sticky;top:106px}
+.pcard{background:var(--d2);border:1px solid var(--br);border-radius:var(--rxl);padding:28px;margin-bottom:20px}
+.pbig{font-size:2.3rem;font-weight:800;color:var(--gd);line-height:1;margin:6px 0 20px}
+.pacts{display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
+.dlive{display:inline-flex;align-items:center;gap:5px;background:rgba(34,197,94,.09);border:1px solid rgba(34,197,94,.22);color:#4ade80;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:99px}
+.ddot{width:5px;height:5px;border-radius:50%;background:#4ade80;animation:pd 1.6s ease-in-out infinite}
+.scard{background:var(--d2);border:1px solid var(--br);border-radius:var(--rxl);overflow:hidden;margin-top:22px}
+.shead{padding:16px 22px;border-bottom:1px solid var(--br);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gd)}
+.sgrid{display:grid;grid-template-columns:1fr 1fr}
+.srow{padding:13px 22px;border-bottom:1px solid var(--br);border-right:1px solid var(--br)}
+.srow:nth-child(even){border-right:none}.srow:nth-last-child(-n+2){border-bottom:none}
+.sk{font-size:.68rem;color:var(--mt);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:3px}
+.sv{font-size:.9rem;color:var(--wh);font-weight:600}
+.ftags{padding:18px 22px;display:flex;flex-wrap:wrap;gap:7px}
+.ftag{background:var(--d3);border:1px solid var(--br);border-radius:5px;padding:5px 11px;font-size:.75rem;color:var(--tx);display:inline-flex;align-items:center;gap:5px}
+.ftag::before{content:'✓';color:var(--gd);font-weight:800;font-size:.7rem}
+.bc{font-size:.78rem;color:var(--mt);margin-bottom:18px;display:flex;align-items:center;gap:6px}
+.bc a:hover{color:var(--gd)}.bc span{color:var(--br2)}
+.fc{background:var(--d2);border:1px solid var(--br);border-radius:var(--rl);padding:26px;transition:border-color var(--t)}
+.fc:hover{border-color:var(--gdbr)}
+.fi2{width:42px;height:42px;border-radius:var(--r);background:var(--gdbg);display:flex;align-items:center;justify-content:center;color:var(--gd);margin-bottom:14px}
+.fc h3{font-size:.97rem;margin-bottom:5px}.fc p{font-size:.83rem;color:var(--mt);margin:0}
+.tc{background:var(--d2);border:1px solid var(--br);border-radius:var(--rl);padding:26px}
+.stars{color:var(--gd);margin-bottom:12px;font-size:.85rem;letter-spacing:2px}
+.tc p{font-size:.88rem;color:var(--mt);font-style:italic;margin-bottom:14px}
+.tau{font-weight:700;font-size:.8rem;color:var(--wh)}
+.ctas{background:var(--d2);border-top:1px solid var(--br);text-align:center}
+.ctas h2{margin:14px 0}.ctas > div > p{color:var(--mt);max-width:480px;margin:0 auto 28px}
+.ctabtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.ph{padding:140px 0 52px;background:var(--d1);border-bottom:1px solid var(--br)}
+.ph h1{margin:7px 0 11px}.ph p{color:var(--mt);max-width:520px;font-size:1rem}
+.fg{margin-bottom:16px}
+.fl{display:block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--mt);margin-bottom:6px}
+.fi,.fsl,.fta{width:100%;background:var(--d3);border:1px solid var(--br);border-radius:var(--r);padding:11px 14px;color:var(--wh);font-family:inherit;font-size:.88rem;outline:none;transition:border-color var(--t)}
+.fi:focus,.fsl:focus,.fta:focus{border-color:var(--gd)}.fsl option{background:var(--d3)}.fta{resize:vertical;min-height:106px}
+.fgr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fbar{background:var(--d2);border:1px solid var(--br);border-radius:var(--rl);padding:20px;margin-bottom:32px;display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.fbar .fg{flex:1;min-width:150px;margin:0}
+.ibox{background:var(--gdbg);border:1px solid var(--gdbr);border-radius:var(--r);padding:14px 18px;font-size:.84rem}
+footer{background:var(--bk);border-top:1px solid var(--br);padding:60px 0 0}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.4fr;gap:36px;margin-bottom:44px}
+.fll img{height:38px;margin-bottom:12px}
+.fll p{font-size:.82rem;color:var(--mt);line-height:1.7;margin-bottom:16px}
+.fh{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--gd);margin-bottom:12px}
+.flnks{display:flex;flex-direction:column;gap:8px}
+.flnks a{font-size:.82rem;color:var(--mt);transition:color var(--t)}.flnks a:hover{color:var(--wh)}
+.fct p{font-size:.82rem;color:var(--mt);margin-bottom:6px}.fct a{color:var(--gd)}
+.fcbtns{display:flex;flex-direction:column;gap:8px}
+.socrow{display:flex;gap:9px;margin-top:14px}
+.sb{width:34px;height:34px;border-radius:50%;background:var(--d2);border:1px solid var(--br);display:flex;align-items:center;justify-content:center;color:var(--mt);transition:all var(--t)}
+.sb:hover{background:var(--gdbg);border-color:var(--gd);color:var(--gd)}
+.fbot{border-top:1px solid var(--br);padding:16px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.fbot p{font-size:.74rem;color:var(--mt)}.fbot a{color:var(--gd)}
+@media(max-width:1024px){.fgrid{grid-template-columns:1fr 1fr}.g4{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){
-  .main-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--clr-black);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:998}
-  .main-nav.open{display:flex}
-  .main-nav a{font-size:1.4rem}
-  .nav-toggle{display:flex;z-index:999}
-  .nav-cta .btn-ghost{display:none}
-  .footer-grid{grid-template-columns:1fr}
-  .form-grid{grid-template-columns:1fr}
-  section{padding:56px 0}
-  .hero-stats{gap:24px}
-  .trust-bar-inner{gap:24px}
-  .filter-bar{flex-direction:column}
-}
-</style>
+  .mnav{display:none;position:fixed;inset:0;background:rgba(7,8,10,.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:6px;z-index:800}
+  .mnav.open{display:flex}.mnav a{font-size:1.25rem;padding:13px 26px}
+  .ham{display:flex}.hph{display:none}
+  .g2,.g3,.g4,.fgrid{grid-template-columns:1fr}.fgr{grid-template-columns:1fr}
+  .hstats{flex-direction:column;gap:18px}.hs{border:none!important;padding:0!important;margin:0!important}
+  .sec{padding:56px 0}.stkcard{position:static}.gmain{aspect-ratio:4/3}
+  .sgrid{grid-template-columns:1fr}.srow{border-right:none}
+  .trin{gap:18px}.fbar{flex-direction:column}.vca{grid-template-columns:1fr}
+}</style>
 </head>
-<body>
-
-<header id="site-header">
-  <div class="container nav-inner">
-    <a href="/" class="logo" aria-label="OpenRoad Auto Group">
-      <img src="/assets/logo.png" alt="OpenRoad Auto Group" height="48">
+<body><header id="hdr"><div class="w hi">
+  <a href="/" class="logo">
+    <img src="/assets/logo.png" alt="OpenRoad" onerror="this.style.display='none'">
+    <div class="lt"><strong>OpenRoad</strong><span>Auto Group</span></div>
+  </a>
+  <nav class="mnav" aria-label="Main">
+    <a href="/">Home</a><a href="/inventory/">Inventory</a><a href="/financing/">Financing</a>
+    <a href="/trade-in/">Trade&#8209;In</a><a href="/car-finder/">Car Finder</a>
+    <a href="/about/">About</a><a href="/contact/">Contact</a>
+  </nav>
+  <div class="hcta">
+    <a href="tel:7869279128" class="hph" data-vapi-phone="(786) 927-9128">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.03 2.2 2 2 0 012 .03h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.25-1.25a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (786) 927-9128
     </a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/inventory/">Inventory</a>
-      <a href="/financing/">Financing</a>
-      <a href="/trade-in/">Trade-In</a>
-      <a href="/car-finder/">Car Finder</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="tel:7869279128" class="btn btn-ghost" data-vapi-phone="(786) 927-9128">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.03 2.2 2 2 0 012 .03h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.25-1.25a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        (786) 927-9128
-      </a>
-      <a href="/inventory/" class="btn btn-primary" data-vapi-action="view-inventory">View Inventory</a>
-    </div>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="/inventory/" class="btn bp bsm">View Inventory</a>
   </div>
-</header>
-
-
+  <button class="ham" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
 <main>
-  <div class="page-hero">
-    <div class="container">
-      <span class="section-label">Trade-In</span>
-      <h1>Get Top Dollar for Your Trade</h1>
-      <p>We offer fair market value for your current vehicle. Apply it directly toward your next purchase.</p>
-    </div>
+<div class="ph"><div class="w"><span class="lbl">Trade Your Vehicle</span><h1>Get Top Dollar for Your Trade</h1><p>Fair market value applied directly toward your next purchase.</p></div></div>
+<section class="sec" style="background:var(--d1)"><div class="w"><div class="g2" style="gap:52px">
+<div style="background:var(--d2);border:1px solid var(--br);border-radius:var(--rxl);padding:32px">
+  <h3 style="margin-bottom:6px">Vehicle Trade-In Form</h3>
+  <p style="font-size:.82rem;color:var(--mt);margin-bottom:22px">We'll contact you with a market-based quote within 24 hours.</p>
+  <div class="fg"><label class="fl">Your Name</label><input type="text" class="fi" placeholder="Full name"></div>
+  <div class="fgr"><div class="fg"><label class="fl">Phone</label><input type="tel" class="fi" placeholder="(786) 000-0000"></div><div class="fg"><label class="fl">Email</label><input type="email" class="fi" placeholder="you@email.com"></div></div>
+  <div class="fgr"><div class="fg"><label class="fl">Year</label><input type="number" class="fi" placeholder="2019"></div><div class="fg"><label class="fl">Make</label><input type="text" class="fi" placeholder="Toyota"></div></div>
+  <div class="fgr"><div class="fg"><label class="fl">Model</label><input type="text" class="fi" placeholder="Camry"></div><div class="fg"><label class="fl">Trim</label><input type="text" class="fi" placeholder="SE"></div></div>
+  <div class="fgr"><div class="fg"><label class="fl">Mileage</label><input type="text" class="fi" placeholder="55,000"></div><div class="fg"><label class="fl">Condition</label><select class="fsl"><option>Excellent</option><option>Good</option><option>Fair</option><option>Poor</option></select></div></div>
+  <div class="fg"><label class="fl">Accident History</label><select class="fsl"><option>Clean — no accidents</option><option>Minor cosmetic damage</option><option>Reported accident(s)</option><option>Flood / salvage title</option></select></div>
+  <div class="fg"><label class="fl">Notes</label><textarea class="fta" placeholder="Modifications, service history, known issues..."></textarea></div>
+  <button onclick="alert('Submitted! We will contact you within 24 hours with a quote.')" class="btn bp blg bfw">Submit Trade-In Request</button>
+</div>
+<div>
+  <span class="lbl">Why Trade With Us</span><h2 style="margin-bottom:26px">Fair Value, Zero Hassle</h2>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div class="fc"><h3>Market-Based Quotes</h3><p>Current market data and live auction values — not lowball tactics.</p></div>
+    <div class="fc"><h3>Apply to Your Purchase</h3><p>Trade-in value goes directly toward your next vehicle.</p></div>
+    <div class="fc"><h3>Same-Day Appraisals</h3><p>Bring your car in and we'll appraise it on the spot.</p></div>
+    <div class="fc"><h3>No Obligation</h3><p>Get a quote with zero commitment. No pressure — ever.</p></div>
   </div>
-  <section>
-    <div class="container">
-      <div class="grid-2">
-        <div class="card" style="padding:36px">
-          <h3 style="margin-bottom:6px">Vehicle Trade-In Form</h3>
-          <p class="text-muted" style="font-size:.88rem;margin-bottom:28px">Fill this out and we'll contact you with a market-based quote.</p>
-          <div class="form-group">
-            <label class="form-label">Your Name</label>
-            <input type="text" class="form-input" placeholder="Full name" data-vapi-field="trade-name">
-          </div>
-          <div class="form-grid">
-            <div class="form-group">
-              <label class="form-label">Phone</label>
-              <input type="tel" class="form-input" placeholder="(786) 000-0000" data-vapi-field="trade-phone">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email</label>
-              <input type="email" class="form-input" placeholder="you@email.com" data-vapi-field="trade-email">
-            </div>
-          </div>
-          <div class="form-grid">
-            <div class="form-group">
-              <label class="form-label">Year</label>
-              <input type="number" class="form-input" placeholder="2019" data-vapi-field="trade-year">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Make</label>
-              <input type="text" class="form-input" placeholder="Ford" data-vapi-field="trade-make">
-            </div>
-          </div>
-          <div class="form-grid">
-            <div class="form-group">
-              <label class="form-label">Model</label>
-              <input type="text" class="form-input" placeholder="F-150" data-vapi-field="trade-model">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Mileage</label>
-              <input type="text" class="form-input" placeholder="45,000" data-vapi-field="trade-mileage">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Condition</label>
-            <select class="form-select" data-vapi-field="trade-condition">
-              <option>Excellent</option>
-              <option>Good</option>
-              <option>Fair</option>
-              <option>Poor</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Additional Notes</label>
-            <textarea class="form-textarea" placeholder="Accidents, modifications, service history..." data-vapi-field="trade-notes"></textarea>
-          </div>
-          <button onclick="alert('Form submitted! We will contact you within 24 hours.')" class="btn btn-primary btn-lg" style="width:100%;justify-content:center" data-vapi-action="submit-trade-in">Submit Trade-In Request</button>
-        </div>
-        <div>
-          <span class="section-label">Why Trade With Us</span>
-          <h2>Fair Value, Zero Hassle</h2>
-          <div style="display:flex;flex-direction:column;gap:20px;margin-top:32px">
-            <div class="feature-card">
-              <h3>Market-Based Quotes</h3>
-              <p style="margin:0">We evaluate your vehicle using current market data — not lowball dealer tactics.</p>
-            </div>
-            <div class="feature-card">
-              <h3>Apply to Your Purchase</h3>
-              <p style="margin:0">Your trade-in value goes directly toward your next vehicle, reducing your out-of-pocket cost.</p>
-            </div>
-            <div class="feature-card">
-              <h3>Same-Day Appraisals</h3>
-              <p style="margin:0">Bring your car in and we'll appraise it on the spot while you browse our inventory.</p>
-            </div>
-          </div>
-        </div>
+</div>
+</div></div></section></main><footer><div class="w">
+  <div class="fgrid">
+    <div class="fll">
+      <img src="/assets/logo.png" alt="OpenRoad Auto Group" onerror="this.style.display='none'">
+      <p>Premium pre-owned vehicles in Opa-Locka, Florida. Quality you can trust, prices you'll love.</p>
+      <div class="socrow">
+        <a href="#" class="sb" aria-label="Facebook"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="sb" aria-label="Instagram"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
       </div>
     </div>
-  </section>
-</main>
-
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="/assets/logo.png" alt="OpenRoad Auto Group" height="44">
-      <p>Premium pre-owned vehicles in Miami's Opa-Locka area. Quality you can trust, prices you'll love.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
+    <div>
+      <p class="fh">Quick Links</p>
+      <div class="flnks"><a href="/">Home</a><a href="/inventory/">Inventory</a><a href="/financing/">Financing</a><a href="/trade-in/">Trade-In</a><a href="/car-finder/">Car Finder</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+    </div>
+    <div class="fct">
+      <p class="fh">Contact</p>
+      <p><strong style="color:var(--wh)">Phone</strong><br><a href="tel:7869279128">(786) 927-9128</a></p>
+      <p><strong style="color:var(--wh)">Location</strong><br>Opa-Locka, FL 33054</p>
+      <p><strong style="color:var(--wh)">Hours</strong><br>Mon–Sat 9AM–7PM &nbsp;|&nbsp; Sun 11AM–5PM</p>
+    </div>
+    <div>
+      <p class="fh">Get Started</p>
+      <p style="font-size:.81rem;color:var(--mt);margin-bottom:13px">Browse inventory or speak to a specialist.</p>
+      <div class="fcbtns">
+        <a href="/inventory/" class="btn bp bsm bfw">Shop Inventory</a>
+        <a href="https://app.dealercenter.net/apply?dealer=openroad" class="btn bo bsm bfw" target="_blank" rel="noopener">Apply for Financing</a>
+        <a href="tel:7869279128" class="btn bg bsm bfw">Call (786) 927-9128</a>
       </div>
     </div>
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <a href="/">Home</a>
-      <a href="/inventory/">Inventory</a>
-      <a href="/financing/">Financing</a>
-      <a href="/trade-in/">Trade-In</a>
-      <a href="/car-finder/">Car Finder</a>
-      <a href="/about/">About Us</a>
-      <a href="/contact/">Contact</a>
-    </div>
-    <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p><strong>Phone:</strong> <a href="tel:7869279128" data-vapi-phone="(786) 927-9128">(786) 927-9128</a></p>
-      <p><strong>Address:</strong><br>Opa-Locka, Florida 33054</p>
-      <p><strong>Hours:</strong><br>Mon–Sat: 9AM – 7PM<br>Sun: 11AM – 5PM</p>
-    </div>
-    <div class="footer-cta">
-      <h4>Ready to Drive?</h4>
-      <p>Browse our curated inventory of premium pre-owned vehicles.</p>
-      <a href="/inventory/" class="btn btn-primary" data-vapi-action="view-inventory">Shop Inventory</a>
-      <a href="https://app.dealercenter.net/apply?dealer=openroad" class="btn btn-outline" target="_blank" rel="noopener" data-vapi-action="apply-financing">Apply for Financing</a>
-    </div>
   </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <p>&copy; 2025 OpenRoad Auto Group. All rights reserved. | <a href="/privacy/">Privacy Policy</a></p>
-      <p>All vehicles are subject to prior sale. Prices exclude taxes, title, and registration fees.</p>
-    </div>
+  <div class="fbot">
+    <p>&copy; 2025 OpenRoad Auto Group. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p>
+    <p>Prices exclude taxes, title &amp; registration. All vehicles subject to prior sale.</p>
   </div>
-</footer>
-<script>
-// Mobile nav toggle
-document.querySelector('.nav-toggle')?.addEventListener('click', function(){
-  const expanded = this.getAttribute('aria-expanded') === 'true';
-  this.setAttribute('aria-expanded', !expanded);
-  document.querySelector('.main-nav').classList.toggle('open');
-});
-// Header scroll effect
-window.addEventListener('scroll', () => {
-  document.getElementById('site-header')?.classList.toggle('scrolled', window.scrollY > 40);
-});
-</script>
-
-</body>
+</div></footer><script>
+(function(){
+  var h=document.getElementById('hdr'),ham=document.querySelector('.ham'),nav=document.querySelector('.mnav');
+  if(ham&&nav){
+    ham.addEventListener('click',function(){var o=nav.classList.toggle('open');ham.setAttribute('aria-expanded',o);});
+    nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');ham.setAttribute('aria-expanded','false');});});
+  }
+  window.addEventListener('scroll',function(){h&&h.classList.toggle('sc',scrollY>50);},{passive:true});
+  var p=location.pathname.replace(/\/$/,'');
+  document.querySelectorAll('.mnav a').forEach(function(a){if(a.getAttribute('href').replace(/\/$/,'')==p)a.classList.add('act');});
+})();
+</script></body>
 </html>

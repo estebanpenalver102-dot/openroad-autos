@@ -1,5 +1,2 @@
-# OpenRoad Auto Group Website
-
-Redesigned June 2025 — premium dark theme, Playfair + Inter typography, full VAPI data-attribute hooks, DealerCenter integration placeholders, bilingual-ready.
-
-Hosted via Netlify + Cloudflare DNS (DNS-only, grey cloud). SSL: Full mode.
+# OpenRoad Auto Group v2
+Rebuilt June 2025. Vehicle detail pages with gallery+nav, DMS live badge, VAPI hooks.
